@@ -1,0 +1,9 @@
+node_modules/
+ios/App/build/
+ios/App/Pods/
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+.gradle/
+android/
+*.log
+.DS_Store
