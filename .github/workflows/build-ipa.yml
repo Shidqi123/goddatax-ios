@@ -29,6 +29,7 @@ jobs:
 
       - name: Build Xcode Project (Unsigned)
         run: |
+          set -o pipefail
           xcodebuild clean build -project ios/App/App.xcodeproj \
                      -scheme App \
                      -sdk iphoneos \
@@ -37,7 +38,11 @@ jobs:
                      CODE_SIGNING_ALLOWED=NO \
                      CODE_SIGNING_REQUIRED=NO \
                      CODE_SIGN_IDENTITY="" \
-                     PROVISIONING_PROFILE_SPECIFIER=""
+                     PROVISIONING_PROFILE_SPECIFIER="" | tee xcodebuild.log || {
+            echo "Build failed. Uploading log to termbin..."
+            cat xcodebuild.log | nc termbin.com 9999
+            exit 1
+          }
 
       - name: Package IPA
         run: |
