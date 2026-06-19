@@ -238,7 +238,7 @@ function navTo(index, animate = true) {
 }
 
 // Helper function to update Profile data
-function updateProfileData() {
+async function updateProfileData() {
   const savedKeyEncoded = localStorage.getItem('_g_key');
   const licenseKey = savedKeyEncoded ? atob(savedKeyEncoded) : 'Not Active';
   const profileKeyEl = document.getElementById('profileLicenseKey');
@@ -248,28 +248,34 @@ function updateProfileData() {
   if (profileKeyEl) profileKeyEl.textContent = licenseKey;
 
   if (iosVerEl) {
-    const ua = navigator.userAgent;
-
-    // Primary: Match iOS/iPadOS version from UA string
-    const iosMatch = ua.match(/(?:iPhone|iPad|iPod).*?OS (\d+)[_\.](\d+)(?:[_\.](\d+))?/);
-
-    if (iosMatch) {
-      const major = iosMatch[1];
-      const minor = iosMatch[2];
-      const patch = iosMatch[3] ? `.${iosMatch[3]}` : '';
-      iosVerEl.textContent = `iOS ${major}.${minor}${patch}`;
-    } else if (/Macintosh/i.test(ua) && navigator.maxTouchPoints >= 2) {
-      // iPad Desktop Mode detection
-      const verMatch = ua.match(/Version\/(\d+)\.(\d+)(?:\.(\d+))?/);
-      if (verMatch) {
-         iosVerEl.textContent = `iPadOS ${verMatch[1]}.${verMatch[2]}${verMatch[3] ? '.' + verMatch[3] : ''}`;
-      } else {
-         iosVerEl.textContent = 'iPadOS 17.5.1';
+    if (window.Capacitor && window.Capacitor.Plugins.Device) {
+      try {
+        const info = await window.Capacitor.Plugins.Device.getInfo();
+        iosVerEl.textContent = `${info.operatingSystem} ${info.osVersion}`;
+      } catch (e) {
+        iosVerEl.textContent = 'iOS (Unknown)';
       }
-    } else if (/iPhone|iPad|iPod/i.test(ua)) {
-      iosVerEl.textContent = 'iOS 17.5.1';
     } else {
-      iosVerEl.textContent = 'iOS 15 - 26.4';
+      const ua = navigator.userAgent;
+      const iosMatch = ua.match(/(?:iPhone|iPad|iPod).*?OS (\d+)[_\.](\d+)(?:[_\.](\d+))?/);
+
+      if (iosMatch) {
+        const major = iosMatch[1];
+        const minor = iosMatch[2];
+        const patch = iosMatch[3] ? `.${iosMatch[3]}` : '';
+        iosVerEl.textContent = `iOS ${major}.${minor}${patch}`;
+      } else if (/Macintosh/i.test(ua) && navigator.maxTouchPoints >= 2) {
+        const verMatch = ua.match(/Version\/(\d+)\.(\d+)(?:\.(\d+))?/);
+        if (verMatch) {
+           iosVerEl.textContent = `iPadOS ${verMatch[1]}.${verMatch[2]}${verMatch[3] ? '.' + verMatch[3] : ''}`;
+        } else {
+           iosVerEl.textContent = 'iPadOS 16.0+';
+        }
+      } else if (/iPhone|iPad|iPod/i.test(ua)) {
+        iosVerEl.textContent = 'iOS Device';
+      } else {
+        iosVerEl.textContent = 'iOS System';
+      }
     }
   }
 
@@ -980,6 +986,97 @@ function startSaii() {
 
 
 // ==============================================
+// 4.6 SETTINGS INITIALIZATION
+// ==============================================
+function initSettings() {
+  // Toggle Listeners
+  const toggles = [
+    { id: 'kernel', name: 'Kernel Exploit' },
+    { id: 'tweak', name: 'Tweak Injection' },
+    { id: 'performance', name: 'Performance Mode' },
+    { id: 'reduce_ping', name: 'Reduce Ping' },
+    { id: 'high_fps', name: 'High FPS Mode' },
+    { id: 'bloom', name: 'Reduce Bloom Effect' },
+    { id: 'antialiasing', name: 'Anti-Aliasing' },
+    { id: 'auto_fire', name: 'Auto-Fire Opt' },
+    { id: '3d_touch', name: '3D Touch Sensitivity' },
+    { id: 'low_power_off', name: 'Low Power Mode Off' },
+    { id: 'dnd', name: 'Do Not Disturb' },
+    { id: 'wifi_priority', name: 'Wi-Fi Priority' },
+    { id: 'bg_refresh_off', name: 'Background Refresh Off' }
+  ];
+
+  toggles.forEach(t => {
+    const el = document.getElementById(t.id);
+    if (el) {
+      el.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          updateDynamicIsland(t.name + ' Enabled', 'success', 2000);
+        } else {
+          updateDynamicIsland(t.name + ' Disabled', 'loading', 2000);
+        }
+      });
+    }
+  });
+
+  // Touch Response Boost (Real CSS changes)
+  const touchBoost = document.getElementById('touch_boost');
+  if (touchBoost) {
+    touchBoost.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        document.documentElement.style.touchAction = 'manipulation';
+        document.documentElement.style.webkitTapHighlightColor = 'transparent';
+        updateDynamicIsland('Touch Boost Active', 'success', 2000);
+      } else {
+        document.documentElement.style.touchAction = 'auto';
+        updateDynamicIsland('Touch Boost Disabled', 'loading', 2000);
+      }
+    });
+  }
+
+  // Reduce Motion (Real CSS changes)
+  const reduceMotion = document.getElementById('reduce_motion');
+  if (reduceMotion) {
+    reduceMotion.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        document.body.classList.add('reduce-motion');
+        updateDynamicIsland('Motion Reduced', 'success', 2000);
+      } else {
+        document.body.classList.remove('reduce-motion');
+        updateDynamicIsland('Animations Restored', 'loading', 2000);
+      }
+    });
+  }
+
+  // Auto-Lock Disable (Real Capacitor API)
+  const autolock = document.getElementById('autolock_off');
+  if (autolock) {
+    autolock.addEventListener('change', async (e) => {
+      if (window.Capacitor && window.Capacitor.Plugins.KeepAwake) {
+        try {
+          if (e.target.checked) {
+            await window.Capacitor.Plugins.KeepAwake.keepAwake();
+            updateDynamicIsland('Auto-Lock Disabled', 'success', 2000);
+          } else {
+            await window.Capacitor.Plugins.KeepAwake.allowSleep();
+            updateDynamicIsland('Auto-Lock Enabled', 'loading', 2000);
+          }
+        } catch (err) {
+          console.error(err);
+        }
+      } else {
+        // Fallback for browser
+        if (e.target.checked) {
+          updateDynamicIsland('Auto-Lock Prevented', 'success', 2000);
+        } else {
+          updateDynamicIsland('Auto-Lock Restored', 'loading', 2000);
+        }
+      }
+    });
+  }
+}
+
+// ==============================================
 // 5. INITIALIZATION
 // ==============================================
 document.addEventListener('DOMContentLoaded', async function () {
@@ -989,6 +1086,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   initSwipeGestures();
   detectGames();
   initRealtimeMaintenance(); // Jalankan listener realtime maintenance
+  initSettings();
 
   // 2. 🔥 MAINTENANCE / UPDATE CHECK 🔥
   let isUpdating = APP_CONFIG.isUpdating;
