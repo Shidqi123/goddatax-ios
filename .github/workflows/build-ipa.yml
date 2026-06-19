@@ -27,21 +27,22 @@ jobs:
       - name: Capacitor Sync
         run: npx cap sync
 
-      - name: Build Xcode Project (Unsigned Archive)
+      - name: Build Xcode Project (Unsigned)
         run: |
-          xcodebuild -project ios/App/App.xcodeproj \
+          xcodebuild clean build -project ios/App/App.xcodeproj \
                      -scheme App \
                      -sdk iphoneos \
                      -configuration Release \
-                     -archivePath $PWD/build/App.xcarchive \
+                     -derivedDataPath $PWD/build \
                      CODE_SIGNING_ALLOWED=NO \
                      CODE_SIGNING_REQUIRED=NO \
-                     clean archive
+                     CODE_SIGN_IDENTITY="" \
+                     PROVISIONING_PROFILE_SPECIFIER=""
 
       - name: Package IPA
         run: |
           mkdir -p Payload
-          cp -r build/App.xcarchive/Products/Applications/App.app Payload/
+          cp -r build/Build/Products/Release-iphoneos/App.app Payload/
           zip -r GODDATAX.ipa Payload
 
       - name: Upload IPA Artifact
