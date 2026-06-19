@@ -237,8 +237,7 @@ function navTo(index, animate = true) {
   updateSliderPill(index);
 }
 
-// Helper function to update Profile data
-async function updateProfileData() {
+function updateProfileData() {
   const savedKeyEncoded = localStorage.getItem('_g_key');
   const licenseKey = savedKeyEncoded ? atob(savedKeyEncoded) : 'Not Active';
   const profileKeyEl = document.getElementById('profileLicenseKey');
@@ -248,38 +247,30 @@ async function updateProfileData() {
   if (profileKeyEl) profileKeyEl.textContent = licenseKey;
 
   if (iosVerEl) {
-    if (window.Capacitor && window.Capacitor.Plugins.Device) {
-      try {
-        const info = await window.Capacitor.Plugins.Device.getInfo();
-        iosVerEl.textContent = `${info.operatingSystem} ${info.osVersion}`;
-      } catch (e) {
-        iosVerEl.textContent = 'iOS (Unknown)';
+    const ua = navigator.userAgent;
+    const isIPad = /Macintosh/i.test(ua) && navigator.maxTouchPoints >= 2;
+
+    // Check for standard OS version (e.g. OS 16_0)
+    const iosMatch = ua.match(/(?:iPhone|iPad|iPod).*?OS (\d+)[_\.](\d+)(?:[_\.](\d+))?/);
+
+    if (iosMatch) {
+      const major = iosMatch[1];
+      const minor = iosMatch[2];
+      const patch = iosMatch[3] ? `.${iosMatch[3]}` : '';
+      iosVerEl.textContent = `${isIPad ? 'iPadOS' : 'iOS'} ${major}.${minor}${patch}`;
+    } else if (isIPad) {
+      // Desktop mode iPad
+      const verMatch = ua.match(/Version\/(\d+)\.(\d+)(?:\.(\d+))?/);
+      if (verMatch) {
+         iosVerEl.textContent = `iPadOS ${verMatch[1]}.${verMatch[2]}${verMatch[3] ? '.' + verMatch[3] : ''}`;
+      } else {
+         iosVerEl.textContent = 'iPadOS (Supported)';
       }
     } else {
-      const ua = navigator.userAgent;
-      const iosMatch = ua.match(/(?:iPhone|iPad|iPod).*?OS (\d+)[_\.](\d+)(?:[_\.](\d+))?/);
-
-      if (iosMatch) {
-        const major = iosMatch[1];
-        const minor = iosMatch[2];
-        const patch = iosMatch[3] ? `.${iosMatch[3]}` : '';
-        iosVerEl.textContent = `iOS ${major}.${minor}${patch}`;
-      } else if (/Macintosh/i.test(ua) && navigator.maxTouchPoints >= 2) {
-        const verMatch = ua.match(/Version\/(\d+)\.(\d+)(?:\.(\d+))?/);
-        if (verMatch) {
-           iosVerEl.textContent = `iPadOS ${verMatch[1]}.${verMatch[2]}${verMatch[3] ? '.' + verMatch[3] : ''}`;
-        } else {
-           iosVerEl.textContent = 'iPadOS 16.0+';
-        }
-      } else if (/iPhone|iPad|iPod/i.test(ua)) {
-        iosVerEl.textContent = 'iOS Device';
-      } else {
-        iosVerEl.textContent = 'iOS System';
-      }
+      iosVerEl.textContent = 'iOS (Supported)';
     }
   }
 
-  // Set default expiry if not found in specific DB logic
   if (expiryEl) expiryEl.textContent = 'OB53 - OB54';
 }
 
@@ -1048,29 +1039,14 @@ function initSettings() {
     });
   }
 
-  // Auto-Lock Disable (Real Capacitor API)
+  // Auto-Lock Disable (Simulated for Webview)
   const autolock = document.getElementById('autolock_off');
   if (autolock) {
-    autolock.addEventListener('change', async (e) => {
-      if (window.Capacitor && window.Capacitor.Plugins.KeepAwake) {
-        try {
-          if (e.target.checked) {
-            await window.Capacitor.Plugins.KeepAwake.keepAwake();
-            updateDynamicIsland('Auto-Lock Disabled', 'success', 2000);
-          } else {
-            await window.Capacitor.Plugins.KeepAwake.allowSleep();
-            updateDynamicIsland('Auto-Lock Enabled', 'loading', 2000);
-          }
-        } catch (err) {
-          console.error(err);
-        }
+    autolock.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        updateDynamicIsland('Auto-Lock Prevented', 'success', 2000);
       } else {
-        // Fallback for browser
-        if (e.target.checked) {
-          updateDynamicIsland('Auto-Lock Prevented', 'success', 2000);
-        } else {
-          updateDynamicIsland('Auto-Lock Restored', 'loading', 2000);
-        }
+        updateDynamicIsland('Auto-Lock Restored', 'loading', 2000);
       }
     });
   }
