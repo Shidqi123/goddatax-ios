@@ -124,6 +124,18 @@
             overflow: hidden;
         }
 
+        .hwid-display {
+            font-size: 10px;
+            color: #8a8a8e;
+            margin-top: 4px;
+            word-break: break-all;
+            font-family: monospace;
+        }
+
+        .hwid-display.linked {
+            color: #00ccff;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -341,7 +353,6 @@
                 <thead>
                     <tr>
                         <th>License Key</th>
-                        <th>Device (HWID)</th>
                         <th>Status</th>
                         <th>Koneksi</th>
                         <th>Actions</th>
@@ -450,11 +461,15 @@
                 const diffMs = Math.abs(now - lastSeen);
                 const isOnline = diffMs < 120000; // 2 Menit threshold
 
+                const hwidVal = lic.hwid || '';
+
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td style="font-family: monospace; font-weight: bold;">${lic.license}</td>
-                    <td style="font-size: 11px; color: ${lic.hwid ? '#fff' : '#8a8a8e'}">
-                        ${lic.hwid ? lic.hwid.substring(0, 15) + '...' : 'Belum Ditautkan'}
+                    <td>
+                        <div style="font-family: monospace; font-weight: bold; font-size: 13px;">${lic.license}</div>
+                        <div class="hwid-display ${hwidVal ? 'linked' : ''}">
+                            ${hwidVal ? '<i class="fas fa-mobile-alt" style="margin-right:4px;"></i>' + hwidVal : '<i class="fas fa-unlink" style="margin-right:4px;"></i>Belum Ditautkan'}
+                        </div>
                     </td>
                     <td>
                         <span class="status-pill status-${lic.status || 'active'}">${(lic.status || 'active').toUpperCase()}</span>

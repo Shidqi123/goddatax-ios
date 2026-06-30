@@ -1,0 +1,779 @@
+﻿2026-06-19T11:17:40.6413170Z Current runner version: '2.335.1'
+2026-06-19T11:17:40.6455660Z ##[group]Runner Image Provisioner
+2026-06-19T11:17:40.6456420Z Hosted Compute Agent
+2026-06-19T11:17:40.6456780Z Version: 20260527.539
+2026-06-19T11:17:40.6457170Z Commit: a891dd388383b896fa6ac04a82c0b75cec981078
+2026-06-19T11:17:40.6457670Z Build Date: 2026-05-27T21:39:57Z
+2026-06-19T11:17:40.6458120Z Worker ID: {f5ca62e8-c2de-43b7-8a5d-d208d7b8b70e}
+2026-06-19T11:17:40.6458580Z Azure Region: westus
+2026-06-19T11:17:40.6458940Z ##[endgroup]
+2026-06-19T11:17:40.6461420Z ##[group]Operating System
+2026-06-19T11:17:40.6461850Z macOS
+2026-06-19T11:17:40.6462180Z 14.8.7
+2026-06-19T11:17:40.6462510Z 23J520
+2026-06-19T11:17:40.6462880Z ##[endgroup]
+2026-06-19T11:17:40.6463230Z ##[group]Runner Image
+2026-06-19T11:17:40.6463610Z Image: macos-14-arm64
+2026-06-19T11:17:40.6463980Z Version: 20260608.0118.1
+2026-06-19T11:17:40.6464910Z Included Software: https://github.com/actions/runner-images/blob/macos-14-arm64/20260608.0118/images/macos/macos-14-arm64-Readme.md
+2026-06-19T11:17:40.6465990Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-14-arm64%2F20260608.0118
+2026-06-19T11:17:40.6466690Z ##[endgroup]
+2026-06-19T11:17:40.6467650Z ##[group]GITHUB_TOKEN Permissions
+2026-06-19T11:17:40.6469390Z Contents: read
+2026-06-19T11:17:40.6469750Z Metadata: read
+2026-06-19T11:17:40.6470110Z Packages: read
+2026-06-19T11:17:40.6470450Z ##[endgroup]
+2026-06-19T11:17:40.6472180Z Secret source: Actions
+2026-06-19T11:17:40.6472650Z Prepare workflow directory
+2026-06-19T11:17:40.6853290Z Prepare all required actions
+2026-06-19T11:17:40.6884920Z Getting action download info
+2026-06-19T11:17:41.1055840Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-06-19T11:17:41.6661430Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-06-19T11:17:41.8494290Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-06-19T11:17:42.1301770Z Complete job name: Build Unsigned IPA
+2026-06-19T11:17:42.1832050Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-06-19T11:17:42.1839300Z ##[group]Run actions/checkout@v4
+2026-06-19T11:17:42.1839800Z with:
+2026-06-19T11:17:42.1840140Z   repository: Shidqi123/goddatax-ios
+2026-06-19T11:17:42.1843270Z   token: ***
+2026-06-19T11:17:42.1843590Z   ssh-strict: true
+2026-06-19T11:17:42.1843910Z   ssh-user: git
+2026-06-19T11:17:42.1844240Z   persist-credentials: true
+2026-06-19T11:17:42.1844600Z   clean: true
+2026-06-19T11:17:42.1844930Z   sparse-checkout-cone-mode: true
+2026-06-19T11:17:42.1845310Z   fetch-depth: 1
+2026-06-19T11:17:42.1845640Z   fetch-tags: false
+2026-06-19T11:17:42.1845960Z   show-progress: true
+2026-06-19T11:17:42.1846310Z   lfs: false
+2026-06-19T11:17:42.1846650Z   submodules: false
+2026-06-19T11:17:42.1846980Z   set-safe-directory: true
+2026-06-19T11:17:42.1847490Z ##[endgroup]
+2026-06-19T11:17:42.6613350Z Syncing repository: Shidqi123/goddatax-ios
+2026-06-19T11:17:42.6618370Z ##[group]Getting Git version info
+2026-06-19T11:17:42.6619560Z Working directory is '/Users/runner/work/goddatax-ios/goddatax-ios'
+2026-06-19T11:17:42.6623230Z [command]/opt/homebrew/bin/git version
+2026-06-19T11:17:42.7021650Z git version 2.54.0
+2026-06-19T11:17:42.7036010Z ##[endgroup]
+2026-06-19T11:17:42.7050970Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/77ab9d17-0dac-40b1-854a-b2645e002d71/.gitconfig'
+2026-06-19T11:17:42.7062280Z Temporarily overriding HOME='/Users/runner/work/_temp/77ab9d17-0dac-40b1-854a-b2645e002d71' before making global git config changes
+2026-06-19T11:17:42.7064690Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-19T11:17:42.7073830Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/goddatax-ios/goddatax-ios
+2026-06-19T11:17:42.7262120Z Deleting the contents of '/Users/runner/work/goddatax-ios/goddatax-ios'
+2026-06-19T11:17:42.7267260Z ##[group]Initializing the repository
+2026-06-19T11:17:42.7279790Z [command]/opt/homebrew/bin/git init /Users/runner/work/goddatax-ios/goddatax-ios
+2026-06-19T11:17:42.7682340Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-19T11:17:42.7683420Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-19T11:17:42.7684220Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-19T11:17:42.7684910Z hint: call:
+2026-06-19T11:17:42.7685270Z hint:
+2026-06-19T11:17:42.7685830Z hint: 	git config --global init.defaultBranch <name>
+2026-06-19T11:17:42.7686510Z hint:
+2026-06-19T11:17:42.7687110Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-19T11:17:42.7689090Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-19T11:17:42.7689900Z hint:
+2026-06-19T11:17:42.7690350Z hint: 	git branch -m <name>
+2026-06-19T11:17:42.7692460Z hint:
+2026-06-19T11:17:42.7694990Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-19T11:17:42.7696120Z Initialized empty Git repository in /Users/runner/work/goddatax-ios/goddatax-ios/.git/
+2026-06-19T11:17:42.7698880Z [command]/opt/homebrew/bin/git remote add origin https://github.com/Shidqi123/goddatax-ios
+2026-06-19T11:17:42.7787160Z ##[endgroup]
+2026-06-19T11:17:42.7788070Z ##[group]Disabling automatic garbage collection
+2026-06-19T11:17:42.7793480Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-06-19T11:17:42.7906080Z ##[endgroup]
+2026-06-19T11:17:42.7908470Z ##[group]Setting up auth
+2026-06-19T11:17:42.7912440Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-19T11:17:42.8012470Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-19T11:17:42.9657900Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-19T11:17:42.9724620Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-19T11:17:43.0780560Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-19T11:17:43.1078960Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-19T11:17:43.2661540Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-19T11:17:43.2685660Z ##[endgroup]
+2026-06-19T11:17:43.2686380Z ##[group]Fetching the repository
+2026-06-19T11:17:43.2687750Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d4997d86a75b21a0247487f5a722eba6285846df:refs/remotes/origin/main
+2026-06-19T11:17:44.3456120Z From https://github.com/Shidqi123/goddatax-ios
+2026-06-19T11:17:44.3460920Z  * [new ref]         d4997d86a75b21a0247487f5a722eba6285846df -> origin/main
+2026-06-19T11:17:44.3704740Z ##[endgroup]
+2026-06-19T11:17:44.3706220Z ##[group]Determining the checkout info
+2026-06-19T11:17:44.3707350Z ##[endgroup]
+2026-06-19T11:17:44.3708940Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-06-19T11:17:44.3776220Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-06-19T11:17:44.3880840Z ##[group]Checking out the ref
+2026-06-19T11:17:44.3891270Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-06-19T11:17:44.4338160Z Switched to a new branch 'main'
+2026-06-19T11:17:44.4347500Z branch 'main' set up to track 'origin/main'.
+2026-06-19T11:17:44.4357230Z ##[endgroup]
+2026-06-19T11:17:44.4453980Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-06-19T11:17:44.4512110Z d4997d86a75b21a0247487f5a722eba6285846df
+2026-06-19T11:17:44.4922850Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-06-19T11:17:44.4926320Z ##[group]Run actions/setup-node@v4
+2026-06-19T11:17:44.4926830Z with:
+2026-06-19T11:17:44.4927190Z   node-version: 22
+2026-06-19T11:17:44.4927590Z   cache: npm
+2026-06-19T11:17:44.4928040Z   always-auth: false
+2026-06-19T11:17:44.4928480Z   check-latest: false
+2026-06-19T11:17:44.4935760Z   token: ***
+2026-06-19T11:17:44.4936170Z ##[endgroup]
+2026-06-19T11:17:44.7453390Z Found in cache @ /Users/runner/hostedtoolcache/node/22.22.3/arm64
+2026-06-19T11:17:44.7470170Z (node:6177) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-06-19T11:17:44.7474810Z ##[group]Environment details
+2026-06-19T11:17:44.7475700Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-19T11:17:45.6428990Z node: v22.22.3
+2026-06-19T11:17:45.6505710Z npm: 10.9.8
+2026-06-19T11:17:45.6506700Z yarn: 1.22.22
+2026-06-19T11:17:45.6540820Z ##[endgroup]
+2026-06-19T11:17:45.6565780Z [command]/Users/runner/hostedtoolcache/node/22.22.3/arm64/bin/npm config get cache
+2026-06-19T11:17:45.9924840Z /Users/runner/.npm
+2026-06-19T11:17:46.2158080Z npm cache is not found
+2026-06-19T11:17:46.2377100Z ##[group]Run npm install
+2026-06-19T11:17:46.2377410Z [36;1mnpm install[0m
+2026-06-19T11:17:46.2551160Z shell: /bin/bash -e {0}
+2026-06-19T11:17:46.2551780Z ##[endgroup]
+2026-06-19T11:17:48.2726800Z 
+2026-06-19T11:17:48.2818010Z added 95 packages, and audited 96 packages in 2s
+2026-06-19T11:17:48.2819930Z 
+2026-06-19T11:17:48.2821030Z 11 packages are looking for funding
+2026-06-19T11:17:48.2823500Z   run `npm fund` for details
+2026-06-19T11:17:48.2826390Z 
+2026-06-19T11:17:48.2827650Z found 0 vulnerabilities
+2026-06-19T11:17:48.4010580Z ##[group]Run npx cap sync
+2026-06-19T11:17:48.4010910Z [36;1mnpx cap sync[0m
+2026-06-19T11:17:48.4073040Z shell: /bin/bash -e {0}
+2026-06-19T11:17:48.4073340Z ##[endgroup]
+2026-06-19T11:17:49.1962250Z ✔ Copying web assets from www to ios/App/App/public in 5.32ms
+2026-06-19T11:17:49.1985010Z ✔ Creating capacitor.config.json in ios/App/App in 1.86ms
+2026-06-19T11:17:49.2044440Z ✔ copy ios in 19.32ms
+2026-06-19T11:17:49.2081960Z ✔ Updating iOS plugins in 999.38μs
+2026-06-19T11:17:49.2182110Z [info] All Capacitor plugins have a Package.swift file and will be included in Package.swift
+2026-06-19T11:17:49.2190270Z [info] Writing Package.swift
+2026-06-19T11:17:49.2243320Z [info] Found 3 Capacitor plugins for ios:
+2026-06-19T11:17:49.2244200Z        @capacitor-community/keep-awake@8.0.1
+2026-06-19T11:17:49.2252400Z        @capacitor/app@8.1.0
+2026-06-19T11:17:49.2253540Z        @capacitor/device@8.0.2
+2026-06-19T11:17:49.2255210Z ✔ update ios in 16.79ms
+2026-06-19T11:17:49.2312180Z ✔ copy web in 2.53ms
+2026-06-19T11:17:49.2360700Z ✔ update web in 2.23ms
+2026-06-19T11:17:49.2377250Z [info] Sync finished in 0.075s
+2026-06-19T11:17:49.2980330Z ##[group]Run xcodebuild clean build -project ios/App/App.xcodeproj \
+2026-06-19T11:17:49.2981530Z [36;1mxcodebuild clean build -project ios/App/App.xcodeproj \[0m
+2026-06-19T11:17:49.2982460Z [36;1m           -scheme App \[0m
+2026-06-19T11:17:49.2983070Z [36;1m           -sdk iphoneos \[0m
+2026-06-19T11:17:49.2983840Z [36;1m           -configuration Release \[0m
+2026-06-19T11:17:49.2984580Z [36;1m           -derivedDataPath $PWD/build \[0m
+2026-06-19T11:17:49.2985440Z [36;1m           CODE_SIGNING_ALLOWED=NO \[0m
+2026-06-19T11:17:49.2992300Z [36;1m           CODE_SIGNING_REQUIRED=NO \[0m
+2026-06-19T11:17:49.2993050Z [36;1m           CODE_SIGN_IDENTITY="" \[0m
+2026-06-19T11:17:49.2993840Z [36;1m           PROVISIONING_PROFILE_SPECIFIER=""[0m
+2026-06-19T11:17:49.3076720Z shell: /bin/bash -e {0}
+2026-06-19T11:17:49.3077180Z ##[endgroup]
+2026-06-19T11:17:52.0608310Z Command line invocation:
+2026-06-19T11:17:52.0618290Z     /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild clean build -project ios/App/App.xcodeproj -scheme App -sdk iphoneos -configuration Release -derivedDataPath /Users/runner/work/goddatax-ios/goddatax-ios/build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE_SPECIFIER=
+2026-06-19T11:17:52.0621050Z 
+2026-06-19T11:17:52.0621310Z User defaults from command line:
+2026-06-19T11:17:52.0621910Z     IDEDerivedDataPathOverride = /Users/runner/work/goddatax-ios/goddatax-ios/build
+2026-06-19T11:17:52.0622520Z     IDEPackageSupportUseBuiltinSCM = YES
+2026-06-19T11:17:52.0622850Z 
+2026-06-19T11:17:52.0623060Z Build settings from command line:
+2026-06-19T11:17:52.0623370Z     CODE_SIGN_IDENTITY = 
+2026-06-19T11:17:52.0623700Z     CODE_SIGNING_ALLOWED = NO
+2026-06-19T11:17:52.0623980Z     CODE_SIGNING_REQUIRED = NO
+2026-06-19T11:17:52.0624360Z     PROVISIONING_PROFILE_SPECIFIER = 
+2026-06-19T11:17:52.0624630Z     SDKROOT = iphoneos17.5
+2026-06-19T11:17:52.0624830Z 
+2026-06-19T11:18:03.7850760Z Resolve Package Graph
+2026-06-19T11:18:18.0409290Z 
+2026-06-19T11:18:18.0439610Z Fetching from https://github.com/ionic-team/capacitor-swift-pm.git
+2026-06-19T11:18:19.0850720Z 
+2026-06-19T11:18:19.6763410Z Creating working copy of package ‘capacitor-swift-pm’
+2026-06-19T11:18:19.7269620Z 
+2026-06-19T11:18:19.7373560Z Checking out 8.4.1 of package ‘capacitor-swift-pm’
+2026-06-19T11:18:19.7503440Z 
+2026-06-19T11:18:21.5190290Z 
+2026-06-19T11:18:21.5221100Z Resolved source packages:
+2026-06-19T11:18:21.5224150Z   CapApp-SPM: /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/CapApp-SPM @ local
+2026-06-19T11:18:21.5293920Z   CapacitorCommunityKeepAwake: /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake @ local
+2026-06-19T11:18:21.5295570Z   CapacitorDevice: /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device @ local
+2026-06-19T11:18:21.5305960Z   CapacitorApp: /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app @ local
+2026-06-19T11:18:21.5307690Z   capacitor-swift-pm: https://github.com/ionic-team/capacitor-swift-pm.git @ 8.4.1
+2026-06-19T11:18:21.5309050Z 
+2026-06-19T11:18:21.6488030Z --- xcodebuild: WARNING: Using the first of multiple matching destinations:
+2026-06-19T11:18:21.6598120Z { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+2026-06-19T11:18:21.6717100Z { platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:0000FE00-456F9E2F6B1D432B, name:My Mac }
+2026-06-19T11:18:21.6867360Z { platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+2026-06-19T11:18:21.6979060Z { platform:visionOS Simulator, variant:Designed for [iPad,iPhone], id:D2E0D98B-3049-47F1-86AE-83F0985912DD, OS:1.2, name:Apple Vision Pro }
+2026-06-19T11:18:21.7084580Z { platform:visionOS Simulator, variant:Designed for [iPad,iPhone], id:E766A940-F46D-4FFC-AA67-9B09D2DA5887, OS:2.1, name:Apple Vision Pro }
+2026-06-19T11:18:21.7214250Z { platform:visionOS Simulator, variant:Designed for [iPad,iPhone], id:AFF9C11C-A23C-4985-ABD8-18D9CAA0F2E5, OS:2.2, name:Apple Vision Pro }
+2026-06-19T11:18:21.7325450Z { platform:iOS Simulator, id:9E38A9B5-D029-4B65-8687-D575619C83DB, OS:17.0.1, name:iPad (10th generation) }
+2026-06-19T11:18:21.7429320Z { platform:iOS Simulator, id:9E38A9B5-D029-4B65-8687-D575619C83DB, OS:17.0.1, name:iPad (10th generation) }
+2026-06-19T11:18:21.7556850Z { platform:iOS Simulator, id:1B80D949-927E-4E6A-873F-4D595F5AAF3F, OS:17.2, name:iPad (10th generation) }
+2026-06-19T11:18:21.7568960Z note: Using codesigning identity override: 
+2026-06-19T11:18:21.7661300Z { platform:iOS Simulator, id:1B80D949-927E-4E6A-873F-4D595F5AAF3F, OS:17.2, name:iPad (10th generation) }
+2026-06-19T11:18:21.7806610Z { platform:iOS Simulator, id:56887A83-9944-4357-82D6-0FE1C470ABA0, OS:17.4, name:iPad (10th generation) }
+2026-06-19T11:18:21.7921390Z { platform:iOS Simulator, id:56887A83-9944-4357-82D6-0FE1C470ABA0, OS:17.4, name:iPad (10th generation) }
+2026-06-19T11:18:21.8069700Z { platform:iOS Simulator, id:B085A217-34E7-4F09-BC3F-418FE1B12DFE, OS:17.5, name:iPad (10th generation) }
+2026-06-19T11:18:21.8221050Z { platform:iOS Simulator, id:B085A217-34E7-4F09-BC3F-418FE1B12DFE, OS:17.5, name:iPad (10th generation) }
+2026-06-19T11:18:21.8324480Z { platform:iOS Simulator, id:0770E779-EB0F-47EB-835C-71DD73056E21, OS:18.1, name:iPad (10th generation) }
+2026-06-19T11:18:21.8427290Z { platform:iOS Simulator, id:0770E779-EB0F-47EB-835C-71DD73056E21, OS:18.1, name:iPad (10th generation) }
+2026-06-19T11:18:21.8531670Z { platform:iOS Simulator, id:12ABFDFA-90A2-41A4-81C7-14F7CE34235B, OS:18.2, name:iPad (10th generation) }
+2026-06-19T11:18:21.8633710Z { platform:iOS Simulator, id:12ABFDFA-90A2-41A4-81C7-14F7CE34235B, OS:18.2, name:iPad (10th generation) }
+2026-06-19T11:18:21.8735540Z { platform:iOS Simulator, id:EF1C68D1-7C9C-4AB5-BCB3-7E17E147969F, OS:17.0.1, name:iPad Air (5th generation) }
+2026-06-19T11:18:21.8865940Z { platform:iOS Simulator, id:EF1C68D1-7C9C-4AB5-BCB3-7E17E147969F, OS:17.0.1, name:iPad Air (5th generation) }
+2026-06-19T11:18:21.8972770Z { platform:iOS Simulator, id:52945966-DC53-419D-97FC-67B9892A3FEE, OS:17.2, name:iPad Air (5th generation) }
+2026-06-19T11:18:21.9080930Z { platform:iOS Simulator, id:52945966-DC53-419D-97FC-67B9892A3FEE, OS:17.2, name:iPad Air (5th generation) }
+2026-06-19T11:18:21.9196500Z { platform:iOS Simulator, id:544DBBE6-232F-4914-A187-263D383642DC, OS:17.4, name:iPad Air (5th generation) }
+2026-06-19T11:18:21.9325960Z { platform:iOS Simulator, id:544DBBE6-232F-4914-A187-263D383642DC, OS:17.4, name:iPad Air (5th generation) }
+2026-06-19T11:18:21.9426580Z { platform:iOS Simulator, id:E8143139-C053-44F4-8205-BA8B7FD293B9, OS:17.4, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9550150Z { platform:iOS Simulator, id:E8143139-C053-44F4-8205-BA8B7FD293B9, OS:17.4, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9598070Z { platform:iOS Simulator, id:6BBBA5D9-873A-4104-BC6F-CEC36C931369, OS:17.5, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9599500Z { platform:iOS Simulator, id:6BBBA5D9-873A-4104-BC6F-CEC36C931369, OS:17.5, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9600430Z { platform:iOS Simulator, id:033829A3-E76E-4627-BA01-8951CD227BBD, OS:18.1, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9601780Z { platform:iOS Simulator, id:033829A3-E76E-4627-BA01-8951CD227BBD, OS:18.1, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9602690Z { platform:iOS Simulator, id:CF27800C-60D1-434B-83F3-806F1FA3F000, OS:18.2, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9603700Z { platform:iOS Simulator, id:CF27800C-60D1-434B-83F3-806F1FA3F000, OS:18.2, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:21.9605930Z { platform:iOS Simulator, id:BDEB87A8-32D1-4EF6-9CE6-3EB69E701C07, OS:17.4, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9607110Z { platform:iOS Simulator, id:BDEB87A8-32D1-4EF6-9CE6-3EB69E701C07, OS:17.4, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9610000Z { platform:iOS Simulator, id:28FE7113-99B0-4020-8D40-4690DA4B9CF6, OS:17.5, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9615110Z { platform:iOS Simulator, id:28FE7113-99B0-4020-8D40-4690DA4B9CF6, OS:17.5, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9620830Z { platform:iOS Simulator, id:6FE4435E-A9AA-49CE-A69E-3D16DC3AFFA3, OS:18.1, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9629870Z { platform:iOS Simulator, id:6FE4435E-A9AA-49CE-A69E-3D16DC3AFFA3, OS:18.1, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9634400Z { platform:iOS Simulator, id:6BA6A4AB-CA72-4776-9AE2-10F03F9E3AA5, OS:18.2, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9638940Z { platform:iOS Simulator, id:6BA6A4AB-CA72-4776-9AE2-10F03F9E3AA5, OS:18.2, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:21.9642060Z { platform:iOS Simulator, id:41CA2768-A560-4C1F-A129-5E9CE89B799F, OS:17.0.1, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:21.9643090Z { platform:iOS Simulator, id:41CA2768-A560-4C1F-A129-5E9CE89B799F, OS:17.0.1, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:21.9644660Z { platform:iOS Simulator, id:ED8AA5D1-2995-4541-A3DD-8E9AF12258C9, OS:17.2, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:21.9645780Z { platform:iOS Simulator, id:ED8AA5D1-2995-4541-A3DD-8E9AF12258C9, OS:17.2, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:21.9660350Z { platform:iOS Simulator, id:8DDE05F2-DE86-4261-9312-1CC12F57BF6D, OS:17.4, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:21.9666390Z { platform:iOS Simulator, id:8DDE05F2-DE86-4261-9312-1CC12F57BF6D, OS:17.4, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:21.9670720Z { platform:iOS Simulator, id:F5AD7DE3-BB0D-46E8-99E9-5366DB1D464A, OS:17.0.1, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:21.9673640Z { platform:iOS Simulator, id:F5AD7DE3-BB0D-46E8-99E9-5366DB1D464A, OS:17.0.1, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:21.9675010Z { platform:iOS Simulator, id:D86263A4-7A54-4426-B888-4982593ABF07, OS:17.2, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:21.9678510Z { platform:iOS Simulator, id:D86263A4-7A54-4426-B888-4982593ABF07, OS:17.2, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:21.9679550Z { platform:iOS Simulator, id:06F66C63-F05B-40B7-A299-4086C81C51E2, OS:17.4, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:21.9680940Z { platform:iOS Simulator, id:06F66C63-F05B-40B7-A299-4086C81C51E2, OS:17.4, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:21.9682450Z { platform:iOS Simulator, id:6719339D-959B-4948-BD78-39380C5C52D1, OS:17.4, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9688370Z { platform:iOS Simulator, id:6719339D-959B-4948-BD78-39380C5C52D1, OS:17.4, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9694240Z { platform:iOS Simulator, id:64E66839-341F-4859-98ED-36A56D1D0AB7, OS:17.5, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9703560Z { platform:iOS Simulator, id:64E66839-341F-4859-98ED-36A56D1D0AB7, OS:17.5, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9712290Z { platform:iOS Simulator, id:BB480C4D-3E83-4B83-84B3-C13396979853, OS:18.1, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9713500Z { platform:iOS Simulator, id:BB480C4D-3E83-4B83-84B3-C13396979853, OS:18.1, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9714480Z { platform:iOS Simulator, id:8FAA7846-46E0-4D1C-9DA5-7AAFF2562550, OS:18.2, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9716850Z { platform:iOS Simulator, id:8FAA7846-46E0-4D1C-9DA5-7AAFF2562550, OS:18.2, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:21.9717950Z { platform:iOS Simulator, id:67F3F84D-9B6A-4119-B779-4BB5E0434948, OS:17.4, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9719260Z { platform:iOS Simulator, id:67F3F84D-9B6A-4119-B779-4BB5E0434948, OS:17.4, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9720360Z { platform:iOS Simulator, id:739DB67B-C30C-4FDD-8F35-40ED9D5612B5, OS:17.5, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9723900Z { platform:iOS Simulator, id:739DB67B-C30C-4FDD-8F35-40ED9D5612B5, OS:17.5, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9724890Z { platform:iOS Simulator, id:79AF2FC3-561B-41C7-8D33-692ACB474C0A, OS:18.1, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9726030Z { platform:iOS Simulator, id:79AF2FC3-561B-41C7-8D33-692ACB474C0A, OS:18.1, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9728310Z { platform:iOS Simulator, id:54327179-9A15-412D-B556-926613A1CF9B, OS:18.2, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9729350Z { platform:iOS Simulator, id:54327179-9A15-412D-B556-926613A1CF9B, OS:18.2, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:21.9730550Z { platform:iOS Simulator, id:B9D7849A-A172-483B-A927-5974ACC75579, OS:17.0.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9731650Z { platform:iOS Simulator, id:B9D7849A-A172-483B-A927-5974ACC75579, OS:17.0.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9732850Z { platform:iOS Simulator, id:D3373216-4F5F-4195-B929-4678979428A6, OS:17.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9733880Z { platform:iOS Simulator, id:D3373216-4F5F-4195-B929-4678979428A6, OS:17.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9734820Z { platform:iOS Simulator, id:D0187DDB-C27C-4F94-98FB-8BBFC12AD429, OS:17.4, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9737410Z { platform:iOS Simulator, id:D0187DDB-C27C-4F94-98FB-8BBFC12AD429, OS:17.4, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9738370Z { platform:iOS Simulator, id:103E0AEE-B22C-449A-8190-7944B9434760, OS:17.5, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9739420Z { platform:iOS Simulator, id:103E0AEE-B22C-449A-8190-7944B9434760, OS:17.5, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9742240Z { platform:iOS Simulator, id:FE8F820A-99DC-4803-A8FB-598E04576CCC, OS:18.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9743550Z { platform:iOS Simulator, id:FE8F820A-99DC-4803-A8FB-598E04576CCC, OS:18.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9744780Z { platform:iOS Simulator, id:8BB5CBD0-D8EE-416C-85DA-760A6FC98296, OS:18.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9746030Z { platform:iOS Simulator, id:8BB5CBD0-D8EE-416C-85DA-760A6FC98296, OS:18.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:21.9749620Z { platform:iOS Simulator, id:6CE2D265-DFB4-4519-9B31-99C9D2E018C2, OS:18.1, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:21.9762360Z { platform:iOS Simulator, id:6CE2D265-DFB4-4519-9B31-99C9D2E018C2, OS:18.1, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:21.9771050Z { platform:iOS Simulator, id:2B29C53E-0348-442B-A943-4A4741FC70AD, OS:18.2, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:21.9772370Z { platform:iOS Simulator, id:2B29C53E-0348-442B-A943-4A4741FC70AD, OS:18.2, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:21.9773650Z { platform:iOS Simulator, id:EB082DB5-A582-4666-8E35-C1B46DF5976B, OS:17.0.1, name:iPhone 15 }
+2026-06-19T11:18:21.9778270Z { platform:iOS Simulator, id:EB082DB5-A582-4666-8E35-C1B46DF5976B, OS:17.0.1, name:iPhone 15 }
+2026-06-19T11:18:21.9783250Z { platform:iOS Simulator, id:6E34EAC9-B371-4001-9523-992E791D619F, OS:17.2, name:iPhone 15 }
+2026-06-19T11:18:21.9799270Z { platform:iOS Simulator, id:6E34EAC9-B371-4001-9523-992E791D619F, OS:17.2, name:iPhone 15 }
+2026-06-19T11:18:21.9839420Z { platform:iOS Simulator, id:CE3A6E43-D9E0-4128-AE91-412DA0B9CDA9, OS:17.4, name:iPhone 15 }
+2026-06-19T11:18:21.9930860Z { platform:iOS Simulator, id:CE3A6E43-D9E0-4128-AE91-412DA0B9CDA9, OS:17.4, name:iPhone 15 }
+2026-06-19T11:18:21.9934410Z { platform:iOS Simulator, id:FB2DD252-EED3-48AA-A714-4ACD5041A402, OS:17.5, name:iPhone 15 }
+2026-06-19T11:18:21.9936480Z { platform:iOS Simulator, id:FB2DD252-EED3-48AA-A714-4ACD5041A402, OS:17.5, name:iPhone 15 }
+2026-06-19T11:18:21.9938400Z { platform:iOS Simulator, id:A1B701CA-F94E-4C1A-A2F6-51814BEBF22D, OS:18.1, name:iPhone 15 }
+2026-06-19T11:18:21.9940330Z { platform:iOS Simulator, id:A1B701CA-F94E-4C1A-A2F6-51814BEBF22D, OS:18.1, name:iPhone 15 }
+2026-06-19T11:18:21.9946960Z { platform:iOS Simulator, id:D233C81A-7821-4717-9445-B12CB31A52D0, OS:18.2, name:iPhone 15 }
+2026-06-19T11:18:21.9958990Z { platform:iOS Simulator, id:D233C81A-7821-4717-9445-B12CB31A52D0, OS:18.2, name:iPhone 15 }
+2026-06-19T11:18:21.9961000Z { platform:iOS Simulator, id:3D958EE7-B6E7-4092-B951-DA273149E622, OS:17.0.1, name:iPhone 15 Plus }
+2026-06-19T11:18:21.9963770Z { platform:iOS Simulator, id:3D958EE7-B6E7-4092-B951-DA273149E622, OS:17.0.1, name:iPhone 15 Plus }
+2026-06-19T11:18:21.9967710Z { platform:iOS Simulator, id:661C0B29-108E-4A35-9679-17E394479111, OS:17.2, name:iPhone 15 Plus }
+2026-06-19T11:18:21.9968600Z { platform:iOS Simulator, id:661C0B29-108E-4A35-9679-17E394479111, OS:17.2, name:iPhone 15 Plus }
+2026-06-19T11:18:21.9969840Z { platform:iOS Simulator, id:52996850-657B-4267-A034-499F0B550597, OS:17.4, name:iPhone 15 Plus }
+2026-06-19T11:18:21.9970600Z { platform:iOS Simulator, id:52996850-657B-4267-A034-499F0B550597, OS:17.4, name:iPhone 15 Plus }
+2026-06-19T11:18:21.9971340Z { platform:iOS Simulator, id:04EC196F-48E2-46E5-81F8-1246520DA644, OS:17.5, name:iPhone 15 Plus }
+2026-06-19T11:18:22.0191770Z { platform:iOS Simulator, id:04EC196F-48E2-46E5-81F8-1246520DA644, OS:17.5, name:iPhone 15 Plus }
+2026-06-19T11:18:22.0192850Z { platform:iOS Simulator, id:C026E988-192F-4180-8CD8-B92D8E6C2365, OS:18.1, name:iPhone 15 Plus }
+2026-06-19T11:18:22.0193620Z { platform:iOS Simulator, id:C026E988-192F-4180-8CD8-B92D8E6C2365, OS:18.1, name:iPhone 15 Plus }
+2026-06-19T11:18:22.0194550Z { platform:iOS Simulator, id:664DB1B2-AE64-4E47-BF0B-DB9A802FAFCC, OS:18.2, name:iPhone 15 Plus }
+2026-06-19T11:18:22.0196890Z { platform:iOS Simulator, id:664DB1B2-AE64-4E47-BF0B-DB9A802FAFCC, OS:18.2, name:iPhone 15 Plus }
+2026-06-19T11:18:22.0199030Z { platform:iOS Simulator, id:DA613E0F-F59C-45E0-946F-3EBC1134F47A, OS:17.0.1, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0200930Z { platform:iOS Simulator, id:DA613E0F-F59C-45E0-946F-3EBC1134F47A, OS:17.0.1, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0202960Z { platform:iOS Simulator, id:047D7AFA-03C0-49B6-B545-9EE83EC5CB6C, OS:17.2, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0206270Z { platform:iOS Simulator, id:047D7AFA-03C0-49B6-B545-9EE83EC5CB6C, OS:17.2, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0207780Z { platform:iOS Simulator, id:421994A4-3456-4A35-9280-F2FD16587589, OS:17.4, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0208930Z { platform:iOS Simulator, id:421994A4-3456-4A35-9280-F2FD16587589, OS:17.4, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0209870Z { platform:iOS Simulator, id:AA057197-D9C0-4267-8F7D-CEF896FFE266, OS:17.5, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0211070Z { platform:iOS Simulator, id:AA057197-D9C0-4267-8F7D-CEF896FFE266, OS:17.5, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0211910Z { platform:iOS Simulator, id:45BA7130-6E90-45D5-B183-FC49DC5F96F9, OS:18.1, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0212770Z { platform:iOS Simulator, id:45BA7130-6E90-45D5-B183-FC49DC5F96F9, OS:18.1, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0213660Z { platform:iOS Simulator, id:94D17673-8E68-47B6-8F77-46C99ABB811C, OS:18.2, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0214410Z { platform:iOS Simulator, id:94D17673-8E68-47B6-8F77-46C99ABB811C, OS:18.2, name:iPhone 15 Pro }
+2026-06-19T11:18:22.0215160Z { platform:iOS Simulator, id:95F8A078-7797-4480-80BB-548A16C969F9, OS:17.0.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0215930Z { platform:iOS Simulator, id:95F8A078-7797-4480-80BB-548A16C969F9, OS:17.0.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0216690Z { platform:iOS Simulator, id:B36188C4-4133-431F-8E52-EFE5F9D7804E, OS:17.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0217530Z { platform:iOS Simulator, id:B36188C4-4133-431F-8E52-EFE5F9D7804E, OS:17.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0218320Z { platform:iOS Simulator, id:0B8FD3A1-359B-4FC4-93CD-0214C64DE37E, OS:17.4, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0223160Z { platform:iOS Simulator, id:0B8FD3A1-359B-4FC4-93CD-0214C64DE37E, OS:17.4, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0223940Z { platform:iOS Simulator, id:B1183B35-6FBB-4551-990B-99FEAEEDF20B, OS:17.5, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0235580Z { platform:iOS Simulator, id:B1183B35-6FBB-4551-990B-99FEAEEDF20B, OS:17.5, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0236640Z { platform:iOS Simulator, id:F71DCFD3-47EF-47DD-B090-E9CCE4604B1F, OS:18.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0237400Z { platform:iOS Simulator, id:F71DCFD3-47EF-47DD-B090-E9CCE4604B1F, OS:18.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0238230Z { platform:iOS Simulator, id:959313D3-4EE6-4CBD-9A52-1E1ECDCE182B, OS:18.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0239250Z { platform:iOS Simulator, id:959313D3-4EE6-4CBD-9A52-1E1ECDCE182B, OS:18.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:22.0255760Z { platform:iOS Simulator, id:DE2D83A1-9F20-4516-ACCC-6B468081EC7C, OS:18.1, name:iPhone 16 }
+2026-06-19T11:18:22.0256770Z { platform:iOS Simulator, id:DE2D83A1-9F20-4516-ACCC-6B468081EC7C, OS:18.1, name:iPhone 16 }
+2026-06-19T11:18:22.0257510Z { platform:iOS Simulator, id:8A1DAB95-8EAD-4E41-8FFB-269CC2FEF0AD, OS:18.2, name:iPhone 16 }
+2026-06-19T11:18:22.0263750Z { platform:iOS Simulator, id:8A1DAB95-8EAD-4E41-8FFB-269CC2FEF0AD, OS:18.2, name:iPhone 16 }
+2026-06-19T11:18:22.0267920Z { platform:iOS Simulator, id:22BFA403-D2D4-4643-9E36-FB11939ED314, OS:18.1, name:iPhone 16 Plus }
+2026-06-19T11:18:22.0285280Z { platform:iOS Simulator, id:22BFA403-D2D4-4643-9E36-FB11939ED314, OS:18.1, name:iPhone 16 Plus }
+2026-06-19T11:18:22.0286280Z { platform:iOS Simulator, id:16EA7613-2375-4F15-977F-FE58BA21F958, OS:18.2, name:iPhone 16 Plus }
+2026-06-19T11:18:22.0287110Z { platform:iOS Simulator, id:16EA7613-2375-4F15-977F-FE58BA21F958, OS:18.2, name:iPhone 16 Plus }
+2026-06-19T11:18:22.0290220Z { platform:iOS Simulator, id:66741DC5-DCCB-4D1C-AFF7-BB1E4521D976, OS:18.1, name:iPhone 16 Pro }
+2026-06-19T11:18:22.0291100Z { platform:iOS Simulator, id:66741DC5-DCCB-4D1C-AFF7-BB1E4521D976, OS:18.1, name:iPhone 16 Pro }
+2026-06-19T11:18:22.0291910Z { platform:iOS Simulator, id:9D109CC9-F01E-471A-A428-BB19AD4D9B26, OS:18.2, name:iPhone 16 Pro }
+2026-06-19T11:18:22.0293450Z { platform:iOS Simulator, id:9D109CC9-F01E-471A-A428-BB19AD4D9B26, OS:18.2, name:iPhone 16 Pro }
+2026-06-19T11:18:22.0294200Z { platform:iOS Simulator, id:9C7E4BAE-9882-45BB-B88B-C59E6CA1DB96, OS:18.1, name:iPhone 16 Pro Max }
+2026-06-19T11:18:22.0295440Z { platform:iOS Simulator, id:9C7E4BAE-9882-45BB-B88B-C59E6CA1DB96, OS:18.1, name:iPhone 16 Pro Max }
+2026-06-19T11:18:22.0296250Z { platform:iOS Simulator, id:A5AFBAAF-E229-4419-BC8B-08DF3A4E5054, OS:18.2, name:iPhone 16 Pro Max }
+2026-06-19T11:18:22.0297050Z { platform:iOS Simulator, id:A5AFBAAF-E229-4419-BC8B-08DF3A4E5054, OS:18.2, name:iPhone 16 Pro Max }
+2026-06-19T11:18:22.0381810Z { platform:iOS Simulator, id:B5C39A69-60A9-4B05-9B6C-77323183D290, OS:17.0.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0442410Z { platform:iOS Simulator, id:B5C39A69-60A9-4B05-9B6C-77323183D290, OS:17.0.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0443770Z { platform:iOS Simulator, id:91CCB3C0-D1BD-434D-9A18-8F663DEC8635, OS:17.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0456830Z { platform:iOS Simulator, id:91CCB3C0-D1BD-434D-9A18-8F663DEC8635, OS:17.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0458430Z { platform:iOS Simulator, id:94721918-35ED-48F3-AA59-D5DAD449C382, OS:17.4, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0488240Z { platform:iOS Simulator, id:94721918-35ED-48F3-AA59-D5DAD449C382, OS:17.4, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0489700Z { platform:iOS Simulator, id:ABD7F2D8-E79A-45AD-8616-49F81263BD32, OS:17.5, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0501730Z { platform:iOS Simulator, id:ABD7F2D8-E79A-45AD-8616-49F81263BD32, OS:17.5, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0503110Z { platform:iOS Simulator, id:26F8A968-D23B-44FB-BF4C-4209BFC5E639, OS:18.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0507030Z { platform:iOS Simulator, id:26F8A968-D23B-44FB-BF4C-4209BFC5E639, OS:18.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0516430Z { platform:iOS Simulator, id:6CD49551-070B-48E8-BEB3-9492D56A1118, OS:18.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.0531180Z { platform:iOS Simulator, id:6CD49551-070B-48E8-BEB3-9492D56A1118, OS:18.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:22.4479640Z 
+2026-06-19T11:18:22.4602820Z ** CLEAN SUCCEEDED **
+2026-06-19T11:18:22.4714990Z 
+2026-06-19T11:18:22.4756470Z --- xcodebuild: WARNING: Using the first of multiple matching destinations:
+2026-06-19T11:18:22.4816020Z Prepare packages
+2026-06-19T11:18:22.4838830Z { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+2026-06-19T11:18:22.4842910Z 
+2026-06-19T11:18:22.4944350Z { platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:0000FE00-456F9E2F6B1D432B, name:My Mac }
+2026-06-19T11:18:22.5082500Z { platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+2026-06-19T11:18:22.5084120Z note: Using codesigning identity override: 
+2026-06-19T11:18:22.5211480Z ComputeTargetDependencyGraph
+2026-06-19T11:18:22.5213420Z { platform:visionOS Simulator, variant:Designed for [iPad,iPhone], id:D2E0D98B-3049-47F1-86AE-83F0985912DD, OS:1.2, name:Apple Vision Pro }
+2026-06-19T11:18:22.5342110Z { platform:visionOS Simulator, variant:Designed for [iPad,iPhone], id:E766A940-F46D-4FFC-AA67-9B09D2DA5887, OS:2.1, name:Apple Vision Pro }
+2026-06-19T11:18:22.5466120Z { platform:visionOS Simulator, variant:Designed for [iPad,iPhone], id:AFF9C11C-A23C-4985-ABD8-18D9CAA0F2E5, OS:2.2, name:Apple Vision Pro }
+2026-06-19T11:18:22.5572260Z { platform:iOS Simulator, id:9E38A9B5-D029-4B65-8687-D575619C83DB, OS:17.0.1, name:iPad (10th generation) }
+2026-06-19T11:18:22.5678340Z { platform:iOS Simulator, id:9E38A9B5-D029-4B65-8687-D575619C83DB, OS:17.0.1, name:iPad (10th generation) }
+2026-06-19T11:18:22.5744630Z { platform:iOS Simulator, id:1B80D949-927E-4E6A-873F-4D595F5AAF3F, OS:17.2, name:iPad (10th generation) }
+2026-06-19T11:18:22.5862150Z { platform:iOS Simulator, id:1B80D949-927E-4E6A-873F-4D595F5AAF3F, OS:17.2, name:iPad (10th generation) }
+2026-06-19T11:18:22.5992520Z { platform:iOS Simulator, id:56887A83-9944-4357-82D6-0FE1C470ABA0, OS:17.4, name:iPad (10th generation) }
+2026-06-19T11:18:22.6138320Z { platform:iOS Simulator, id:56887A83-9944-4357-82D6-0FE1C470ABA0, OS:17.4, name:iPad (10th generation) }
+2026-06-19T11:18:22.6249480Z { platform:iOS Simulator, id:B085A217-34E7-4F09-BC3F-418FE1B12DFE, OS:17.5, name:iPad (10th generation) }
+2026-06-19T11:18:22.6250070Z note: Building targets in dependency order
+2026-06-19T11:18:22.6354670Z { platform:iOS Simulator, id:B085A217-34E7-4F09-BC3F-418FE1B12DFE, OS:17.5, name:iPad (10th generation) }
+2026-06-19T11:18:22.6355190Z note: Target dependency graph (11 targets)
+2026-06-19T11:18:22.6471500Z { platform:iOS Simulator, id:0770E779-EB0F-47EB-835C-71DD73056E21, OS:18.1, name:iPad (10th generation) }
+2026-06-19T11:18:22.6473090Z     Target 'App' in project 'App'
+2026-06-19T11:18:22.6576760Z { platform:iOS Simulator, id:0770E779-EB0F-47EB-835C-71DD73056E21, OS:18.1, name:iPad (10th generation) }
+2026-06-19T11:18:22.6579130Z         ➜ Explicit dependency on target 'CapApp-SPM' in project 'CapApp-SPM'
+2026-06-19T11:18:22.6689770Z { platform:iOS Simulator, id:12ABFDFA-90A2-41A4-81C7-14F7CE34235B, OS:18.2, name:iPad (10th generation) }
+2026-06-19T11:18:22.6690280Z     Target 'CapApp-SPM' in project 'CapApp-SPM'
+2026-06-19T11:18:22.6749390Z { platform:iOS Simulator, id:12ABFDFA-90A2-41A4-81C7-14F7CE34235B, OS:18.2, name:iPad (10th generation) }
+2026-06-19T11:18:22.6750160Z         ➜ Explicit dependency on target 'CapApp-SPM' in project 'CapApp-SPM'
+2026-06-19T11:18:22.6862280Z { platform:iOS Simulator, id:EF1C68D1-7C9C-4AB5-BCB3-7E17E147969F, OS:17.0.1, name:iPad Air (5th generation) }
+2026-06-19T11:18:22.6864280Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.6999210Z { platform:iOS Simulator, id:EF1C68D1-7C9C-4AB5-BCB3-7E17E147969F, OS:17.0.1, name:iPad Air (5th generation) }
+2026-06-19T11:18:22.7001180Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.7133720Z { platform:iOS Simulator, id:52945966-DC53-419D-97FC-67B9892A3FEE, OS:17.2, name:iPad Air (5th generation) }
+2026-06-19T11:18:22.7134630Z         ➜ Explicit dependency on target 'CapacitorCommunityKeepAwake' in project 'CapacitorCommunityKeepAwake'
+2026-06-19T11:18:22.7258020Z { platform:iOS Simulator, id:52945966-DC53-419D-97FC-67B9892A3FEE, OS:17.2, name:iPad Air (5th generation) }
+2026-06-19T11:18:22.7258880Z         ➜ Explicit dependency on target 'CapacitorApp' in project 'CapacitorApp'
+2026-06-19T11:18:22.7361180Z { platform:iOS Simulator, id:544DBBE6-232F-4914-A187-263D383642DC, OS:17.4, name:iPad Air (5th generation) }
+2026-06-19T11:18:22.7362040Z         ➜ Explicit dependency on target 'CapacitorDevice' in project 'CapacitorDevice'
+2026-06-19T11:18:22.7403160Z { platform:iOS Simulator, id:544DBBE6-232F-4914-A187-263D383642DC, OS:17.4, name:iPad Air (5th generation) }
+2026-06-19T11:18:22.7404000Z     Target 'CapApp-SPM' in project 'CapApp-SPM'
+2026-06-19T11:18:22.7527010Z { platform:iOS Simulator, id:E8143139-C053-44F4-8205-BA8B7FD293B9, OS:17.4, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.7543290Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.7629240Z { platform:iOS Simulator, id:E8143139-C053-44F4-8205-BA8B7FD293B9, OS:17.4, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.7666940Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.7732160Z { platform:iOS Simulator, id:6BBBA5D9-873A-4104-BC6F-CEC36C931369, OS:17.5, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.7773710Z         ➜ Explicit dependency on target 'CapacitorCommunityKeepAwake' in project 'CapacitorCommunityKeepAwake'
+2026-06-19T11:18:22.7835360Z { platform:iOS Simulator, id:6BBBA5D9-873A-4104-BC6F-CEC36C931369, OS:17.5, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.7871850Z         ➜ Explicit dependency on target 'CapacitorApp' in project 'CapacitorApp'
+2026-06-19T11:18:22.7937530Z { platform:iOS Simulator, id:033829A3-E76E-4627-BA01-8951CD227BBD, OS:18.1, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.7975580Z         ➜ Explicit dependency on target 'CapacitorDevice' in project 'CapacitorDevice'
+2026-06-19T11:18:22.8035460Z { platform:iOS Simulator, id:033829A3-E76E-4627-BA01-8951CD227BBD, OS:18.1, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.8077300Z     Target 'CapacitorDevice' in project 'CapacitorDevice'
+2026-06-19T11:18:22.8138370Z { platform:iOS Simulator, id:CF27800C-60D1-434B-83F3-806F1FA3F000, OS:18.2, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.8178840Z         ➜ Explicit dependency on target 'DevicePlugin' in project 'CapacitorDevice'
+2026-06-19T11:18:22.8240610Z { platform:iOS Simulator, id:CF27800C-60D1-434B-83F3-806F1FA3F000, OS:18.2, name:iPad Air 11-inch (M2) }
+2026-06-19T11:18:22.8281470Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8368400Z { platform:iOS Simulator, id:BDEB87A8-32D1-4EF6-9CE6-3EB69E701C07, OS:17.4, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8384750Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8474860Z { platform:iOS Simulator, id:BDEB87A8-32D1-4EF6-9CE6-3EB69E701C07, OS:17.4, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8475450Z     Target 'DevicePlugin' in project 'CapacitorDevice'
+2026-06-19T11:18:22.8577800Z { platform:iOS Simulator, id:28FE7113-99B0-4020-8D40-4690DA4B9CF6, OS:17.5, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8578720Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8681810Z { platform:iOS Simulator, id:28FE7113-99B0-4020-8D40-4690DA4B9CF6, OS:17.5, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8690320Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8784640Z { platform:iOS Simulator, id:6FE4435E-A9AA-49CE-A69E-3D16DC3AFFA3, OS:18.1, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8785280Z     Target 'CapacitorApp' in project 'CapacitorApp'
+2026-06-19T11:18:22.8810590Z { platform:iOS Simulator, id:6FE4435E-A9AA-49CE-A69E-3D16DC3AFFA3, OS:18.1, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8811470Z         ➜ Explicit dependency on target 'AppPlugin' in project 'CapacitorApp'
+2026-06-19T11:18:22.8823030Z { platform:iOS Simulator, id:6BA6A4AB-CA72-4776-9AE2-10F03F9E3AA5, OS:18.2, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8825160Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8836940Z { platform:iOS Simulator, id:6BA6A4AB-CA72-4776-9AE2-10F03F9E3AA5, OS:18.2, name:iPad Air 13-inch (M2) }
+2026-06-19T11:18:22.8837640Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8839120Z { platform:iOS Simulator, id:41CA2768-A560-4C1F-A129-5E9CE89B799F, OS:17.0.1, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:22.8839680Z     Target 'AppPlugin' in project 'CapacitorApp'
+2026-06-19T11:18:22.8840570Z { platform:iOS Simulator, id:41CA2768-A560-4C1F-A129-5E9CE89B799F, OS:17.0.1, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:22.8841280Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8860380Z { platform:iOS Simulator, id:ED8AA5D1-2995-4541-A3DD-8E9AF12258C9, OS:17.2, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:22.8861120Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8862020Z { platform:iOS Simulator, id:ED8AA5D1-2995-4541-A3DD-8E9AF12258C9, OS:17.2, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:22.8876970Z     Target 'CapacitorCommunityKeepAwake' in project 'CapacitorCommunityKeepAwake'
+2026-06-19T11:18:22.8980130Z { platform:iOS Simulator, id:8DDE05F2-DE86-4261-9312-1CC12F57BF6D, OS:17.4, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:22.8982050Z         ➜ Explicit dependency on target 'KeepAwakePlugin' in project 'CapacitorCommunityKeepAwake'
+2026-06-19T11:18:22.8993200Z { platform:iOS Simulator, id:8DDE05F2-DE86-4261-9312-1CC12F57BF6D, OS:17.4, name:iPad Pro (11-inch) (4th generation) }
+2026-06-19T11:18:22.8993920Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8996050Z { platform:iOS Simulator, id:F5AD7DE3-BB0D-46E8-99E9-5366DB1D464A, OS:17.0.1, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:22.8996730Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.8997670Z { platform:iOS Simulator, id:F5AD7DE3-BB0D-46E8-99E9-5366DB1D464A, OS:17.0.1, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:22.8998250Z     Target 'KeepAwakePlugin' in project 'CapacitorCommunityKeepAwake'
+2026-06-19T11:18:22.8999230Z { platform:iOS Simulator, id:D86263A4-7A54-4426-B888-4982593ABF07, OS:17.2, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:22.8999870Z         ➜ Explicit dependency on target 'Capacitor' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.9001180Z { platform:iOS Simulator, id:D86263A4-7A54-4426-B888-4982593ABF07, OS:17.2, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:22.9002030Z         ➜ Explicit dependency on target 'Cordova' in project 'capacitor-swift-pm'
+2026-06-19T11:18:22.9004820Z { platform:iOS Simulator, id:06F66C63-F05B-40B7-A299-4086C81C51E2, OS:17.4, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:22.9006500Z     Target 'Cordova' in project 'capacitor-swift-pm' (no dependencies)
+2026-06-19T11:18:22.9017040Z { platform:iOS Simulator, id:06F66C63-F05B-40B7-A299-4086C81C51E2, OS:17.4, name:iPad Pro (12.9-inch) (6th generation) }
+2026-06-19T11:18:22.9017610Z     Target 'Capacitor' in project 'capacitor-swift-pm' (no dependencies)
+2026-06-19T11:18:22.9064600Z { platform:iOS Simulator, id:6719339D-959B-4948-BD78-39380C5C52D1, OS:17.4, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9192690Z 
+2026-06-19T11:18:22.9193410Z { platform:iOS Simulator, id:6719339D-959B-4948-BD78-39380C5C52D1, OS:17.4, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9193830Z GatherProvisioningInputs
+2026-06-19T11:18:22.9263240Z { platform:iOS Simulator, id:64E66839-341F-4859-98ED-36A56D1D0AB7, OS:17.5, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9265690Z 
+2026-06-19T11:18:22.9369620Z { platform:iOS Simulator, id:64E66839-341F-4859-98ED-36A56D1D0AB7, OS:17.5, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9370080Z CreateBuildDescription
+2026-06-19T11:18:22.9473040Z { platform:iOS Simulator, id:BB480C4D-3E83-4B83-84B3-C13396979853, OS:18.1, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9474070Z 
+2026-06-19T11:18:22.9573950Z { platform:iOS Simulator, id:BB480C4D-3E83-4B83-84B3-C13396979853, OS:18.1, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9576650Z ExecuteExternalTool /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -v
+2026-06-19T11:18:22.9692290Z { platform:iOS Simulator, id:8FAA7846-46E0-4D1C-9DA5-7AAFF2562550, OS:18.2, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9827510Z { platform:iOS Simulator, id:8FAA7846-46E0-4D1C-9DA5-7AAFF2562550, OS:18.2, name:iPad Pro 11-inch (M4) }
+2026-06-19T11:18:22.9930550Z { platform:iOS Simulator, id:67F3F84D-9B6A-4119-B779-4BB5E0434948, OS:17.4, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0003660Z { platform:iOS Simulator, id:67F3F84D-9B6A-4119-B779-4BB5E0434948, OS:17.4, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0078670Z { platform:iOS Simulator, id:739DB67B-C30C-4FDD-8F35-40ED9D5612B5, OS:17.5, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0095770Z { platform:iOS Simulator, id:739DB67B-C30C-4FDD-8F35-40ED9D5612B5, OS:17.5, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0136790Z { platform:iOS Simulator, id:79AF2FC3-561B-41C7-8D33-692ACB474C0A, OS:18.1, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0146940Z { platform:iOS Simulator, id:79AF2FC3-561B-41C7-8D33-692ACB474C0A, OS:18.1, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0170080Z { platform:iOS Simulator, id:54327179-9A15-412D-B556-926613A1CF9B, OS:18.2, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0171210Z { platform:iOS Simulator, id:54327179-9A15-412D-B556-926613A1CF9B, OS:18.2, name:iPad Pro 13-inch (M4) }
+2026-06-19T11:18:23.0173680Z { platform:iOS Simulator, id:B9D7849A-A172-483B-A927-5974ACC75579, OS:17.0.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0174920Z { platform:iOS Simulator, id:B9D7849A-A172-483B-A927-5974ACC75579, OS:17.0.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0175960Z { platform:iOS Simulator, id:D3373216-4F5F-4195-B929-4678979428A6, OS:17.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0177270Z { platform:iOS Simulator, id:D3373216-4F5F-4195-B929-4678979428A6, OS:17.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0234880Z { platform:iOS Simulator, id:D0187DDB-C27C-4F94-98FB-8BBFC12AD429, OS:17.4, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0236670Z { platform:iOS Simulator, id:D0187DDB-C27C-4F94-98FB-8BBFC12AD429, OS:17.4, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0237590Z { platform:iOS Simulator, id:103E0AEE-B22C-449A-8190-7944B9434760, OS:17.5, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0238520Z { platform:iOS Simulator, id:103E0AEE-B22C-449A-8190-7944B9434760, OS:17.5, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0242540Z { platform:iOS Simulator, id:FE8F820A-99DC-4803-A8FB-598E04576CCC, OS:18.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0252750Z { platform:iOS Simulator, id:FE8F820A-99DC-4803-A8FB-598E04576CCC, OS:18.1, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0254960Z { platform:iOS Simulator, id:8BB5CBD0-D8EE-416C-85DA-760A6FC98296, OS:18.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0255950Z { platform:iOS Simulator, id:8BB5CBD0-D8EE-416C-85DA-760A6FC98296, OS:18.2, name:iPad mini (6th generation) }
+2026-06-19T11:18:23.0257470Z { platform:iOS Simulator, id:6CE2D265-DFB4-4519-9B31-99C9D2E018C2, OS:18.1, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:23.0261270Z { platform:iOS Simulator, id:6CE2D265-DFB4-4519-9B31-99C9D2E018C2, OS:18.1, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:23.0263340Z { platform:iOS Simulator, id:2B29C53E-0348-442B-A943-4A4741FC70AD, OS:18.2, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:23.0264240Z { platform:iOS Simulator, id:2B29C53E-0348-442B-A943-4A4741FC70AD, OS:18.2, name:iPad mini (A17 Pro) }
+2026-06-19T11:18:23.0266430Z { platform:iOS Simulator, id:EB082DB5-A582-4666-8E35-C1B46DF5976B, OS:17.0.1, name:iPhone 15 }
+2026-06-19T11:18:23.0271690Z { platform:iOS Simulator, id:EB082DB5-A582-4666-8E35-C1B46DF5976B, OS:17.0.1, name:iPhone 15 }
+2026-06-19T11:18:23.0283850Z { platform:iOS Simulator, id:6E34EAC9-B371-4001-9523-992E791D619F, OS:17.2, name:iPhone 15 }
+2026-06-19T11:18:23.0287240Z { platform:iOS Simulator, id:6E34EAC9-B371-4001-9523-992E791D619F, OS:17.2, name:iPhone 15 }
+2026-06-19T11:18:23.0289280Z { platform:iOS Simulator, id:CE3A6E43-D9E0-4128-AE91-412DA0B9CDA9, OS:17.4, name:iPhone 15 }
+2026-06-19T11:18:23.0292480Z { platform:iOS Simulator, id:CE3A6E43-D9E0-4128-AE91-412DA0B9CDA9, OS:17.4, name:iPhone 15 }
+2026-06-19T11:18:23.0399790Z { platform:iOS Simulator, id:FB2DD252-EED3-48AA-A714-4ACD5041A402, OS:17.5, name:iPhone 15 }
+2026-06-19T11:18:23.0400740Z { platform:iOS Simulator, id:FB2DD252-EED3-48AA-A714-4ACD5041A402, OS:17.5, name:iPhone 15 }
+2026-06-19T11:18:23.0406600Z { platform:iOS Simulator, id:A1B701CA-F94E-4C1A-A2F6-51814BEBF22D, OS:18.1, name:iPhone 15 }
+2026-06-19T11:18:23.0415390Z { platform:iOS Simulator, id:A1B701CA-F94E-4C1A-A2F6-51814BEBF22D, OS:18.1, name:iPhone 15 }
+2026-06-19T11:18:23.0440370Z { platform:iOS Simulator, id:D233C81A-7821-4717-9445-B12CB31A52D0, OS:18.2, name:iPhone 15 }
+2026-06-19T11:18:23.0441320Z { platform:iOS Simulator, id:D233C81A-7821-4717-9445-B12CB31A52D0, OS:18.2, name:iPhone 15 }
+2026-06-19T11:18:23.0442640Z { platform:iOS Simulator, id:3D958EE7-B6E7-4092-B951-DA273149E622, OS:17.0.1, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0450630Z { platform:iOS Simulator, id:3D958EE7-B6E7-4092-B951-DA273149E622, OS:17.0.1, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0451400Z { platform:iOS Simulator, id:661C0B29-108E-4A35-9679-17E394479111, OS:17.2, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0465850Z { platform:iOS Simulator, id:661C0B29-108E-4A35-9679-17E394479111, OS:17.2, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0504370Z { platform:iOS Simulator, id:52996850-657B-4267-A034-499F0B550597, OS:17.4, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0507680Z { platform:iOS Simulator, id:52996850-657B-4267-A034-499F0B550597, OS:17.4, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0508480Z { platform:iOS Simulator, id:04EC196F-48E2-46E5-81F8-1246520DA644, OS:17.5, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0509620Z { platform:iOS Simulator, id:04EC196F-48E2-46E5-81F8-1246520DA644, OS:17.5, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0520900Z { platform:iOS Simulator, id:C026E988-192F-4180-8CD8-B92D8E6C2365, OS:18.1, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0521680Z { platform:iOS Simulator, id:C026E988-192F-4180-8CD8-B92D8E6C2365, OS:18.1, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0523340Z { platform:iOS Simulator, id:664DB1B2-AE64-4E47-BF0B-DB9A802FAFCC, OS:18.2, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0638550Z { platform:iOS Simulator, id:664DB1B2-AE64-4E47-BF0B-DB9A802FAFCC, OS:18.2, name:iPhone 15 Plus }
+2026-06-19T11:18:23.0721550Z { platform:iOS Simulator, id:DA613E0F-F59C-45E0-946F-3EBC1134F47A, OS:17.0.1, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0726330Z { platform:iOS Simulator, id:DA613E0F-F59C-45E0-946F-3EBC1134F47A, OS:17.0.1, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0727920Z { platform:iOS Simulator, id:047D7AFA-03C0-49B6-B545-9EE83EC5CB6C, OS:17.2, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0728740Z { platform:iOS Simulator, id:047D7AFA-03C0-49B6-B545-9EE83EC5CB6C, OS:17.2, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0730750Z { platform:iOS Simulator, id:421994A4-3456-4A35-9280-F2FD16587589, OS:17.4, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0738440Z { platform:iOS Simulator, id:421994A4-3456-4A35-9280-F2FD16587589, OS:17.4, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0744090Z { platform:iOS Simulator, id:AA057197-D9C0-4267-8F7D-CEF896FFE266, OS:17.5, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0781220Z { platform:iOS Simulator, id:AA057197-D9C0-4267-8F7D-CEF896FFE266, OS:17.5, name:iPhone 15 Pro }
+2026-06-19T11:18:23.0914370Z { platform:iOS Simulator, id:45BA7130-6E90-45D5-B183-FC49DC5F96F9, OS:18.1, name:iPhone 15 Pro }
+2026-06-19T11:18:23.1027370Z { platform:iOS Simulator, id:45BA7130-6E90-45D5-B183-FC49DC5F96F9, OS:18.1, name:iPhone 15 Pro }
+2026-06-19T11:18:23.1134070Z { platform:iOS Simulator, id:94D17673-8E68-47B6-8F77-46C99ABB811C, OS:18.2, name:iPhone 15 Pro }
+2026-06-19T11:18:23.1243500Z { platform:iOS Simulator, id:94D17673-8E68-47B6-8F77-46C99ABB811C, OS:18.2, name:iPhone 15 Pro }
+2026-06-19T11:18:23.1344920Z { platform:iOS Simulator, id:95F8A078-7797-4480-80BB-548A16C969F9, OS:17.0.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.1412760Z { platform:iOS Simulator, id:95F8A078-7797-4480-80BB-548A16C969F9, OS:17.0.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.1515500Z { platform:iOS Simulator, id:B36188C4-4133-431F-8E52-EFE5F9D7804E, OS:17.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.1610190Z { platform:iOS Simulator, id:B36188C4-4133-431F-8E52-EFE5F9D7804E, OS:17.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.1713010Z { platform:iOS Simulator, id:0B8FD3A1-359B-4FC4-93CD-0214C64DE37E, OS:17.4, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.1814050Z { platform:iOS Simulator, id:0B8FD3A1-359B-4FC4-93CD-0214C64DE37E, OS:17.4, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.1969920Z { platform:iOS Simulator, id:B1183B35-6FBB-4551-990B-99FEAEEDF20B, OS:17.5, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.2013580Z { platform:iOS Simulator, id:B1183B35-6FBB-4551-990B-99FEAEEDF20B, OS:17.5, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.2033840Z { platform:iOS Simulator, id:F71DCFD3-47EF-47DD-B090-E9CCE4604B1F, OS:18.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.2036000Z { platform:iOS Simulator, id:F71DCFD3-47EF-47DD-B090-E9CCE4604B1F, OS:18.1, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.2038110Z { platform:iOS Simulator, id:959313D3-4EE6-4CBD-9A52-1E1ECDCE182B, OS:18.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.2040130Z { platform:iOS Simulator, id:959313D3-4EE6-4CBD-9A52-1E1ECDCE182B, OS:18.2, name:iPhone 15 Pro Max }
+2026-06-19T11:18:23.2041980Z { platform:iOS Simulator, id:DE2D83A1-9F20-4516-ACCC-6B468081EC7C, OS:18.1, name:iPhone 16 }
+2026-06-19T11:18:23.2044120Z { platform:iOS Simulator, id:DE2D83A1-9F20-4516-ACCC-6B468081EC7C, OS:18.1, name:iPhone 16 }
+2026-06-19T11:18:23.2053320Z { platform:iOS Simulator, id:8A1DAB95-8EAD-4E41-8FFB-269CC2FEF0AD, OS:18.2, name:iPhone 16 }
+2026-06-19T11:18:23.2056340Z { platform:iOS Simulator, id:8A1DAB95-8EAD-4E41-8FFB-269CC2FEF0AD, OS:18.2, name:iPhone 16 }
+2026-06-19T11:18:23.2059800Z { platform:iOS Simulator, id:22BFA403-D2D4-4643-9E36-FB11939ED314, OS:18.1, name:iPhone 16 Plus }
+2026-06-19T11:18:23.2070700Z { platform:iOS Simulator, id:22BFA403-D2D4-4643-9E36-FB11939ED314, OS:18.1, name:iPhone 16 Plus }
+2026-06-19T11:18:23.2077770Z { platform:iOS Simulator, id:16EA7613-2375-4F15-977F-FE58BA21F958, OS:18.2, name:iPhone 16 Plus }
+2026-06-19T11:18:23.2079940Z { platform:iOS Simulator, id:16EA7613-2375-4F15-977F-FE58BA21F958, OS:18.2, name:iPhone 16 Plus }
+2026-06-19T11:18:23.2080980Z { platform:iOS Simulator, id:66741DC5-DCCB-4D1C-AFF7-BB1E4521D976, OS:18.1, name:iPhone 16 Pro }
+2026-06-19T11:18:23.2086310Z { platform:iOS Simulator, id:66741DC5-DCCB-4D1C-AFF7-BB1E4521D976, OS:18.1, name:iPhone 16 Pro }
+2026-06-19T11:18:23.2088940Z { platform:iOS Simulator, id:9D109CC9-F01E-471A-A428-BB19AD4D9B26, OS:18.2, name:iPhone 16 Pro }
+2026-06-19T11:18:23.2191780Z { platform:iOS Simulator, id:9D109CC9-F01E-471A-A428-BB19AD4D9B26, OS:18.2, name:iPhone 16 Pro }
+2026-06-19T11:18:23.2197160Z { platform:iOS Simulator, id:9C7E4BAE-9882-45BB-B88B-C59E6CA1DB96, OS:18.1, name:iPhone 16 Pro Max }
+2026-06-19T11:18:23.2202560Z { platform:iOS Simulator, id:9C7E4BAE-9882-45BB-B88B-C59E6CA1DB96, OS:18.1, name:iPhone 16 Pro Max }
+2026-06-19T11:18:23.2203700Z { platform:iOS Simulator, id:A5AFBAAF-E229-4419-BC8B-08DF3A4E5054, OS:18.2, name:iPhone 16 Pro Max }
+2026-06-19T11:18:23.2205270Z { platform:iOS Simulator, id:A5AFBAAF-E229-4419-BC8B-08DF3A4E5054, OS:18.2, name:iPhone 16 Pro Max }
+2026-06-19T11:18:23.2206110Z { platform:iOS Simulator, id:B5C39A69-60A9-4B05-9B6C-77323183D290, OS:17.0.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2206980Z { platform:iOS Simulator, id:B5C39A69-60A9-4B05-9B6C-77323183D290, OS:17.0.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2208040Z { platform:iOS Simulator, id:91CCB3C0-D1BD-434D-9A18-8F663DEC8635, OS:17.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2208840Z { platform:iOS Simulator, id:91CCB3C0-D1BD-434D-9A18-8F663DEC8635, OS:17.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2211220Z { platform:iOS Simulator, id:94721918-35ED-48F3-AA59-D5DAD449C382, OS:17.4, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2213800Z { platform:iOS Simulator, id:94721918-35ED-48F3-AA59-D5DAD449C382, OS:17.4, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2216190Z { platform:iOS Simulator, id:ABD7F2D8-E79A-45AD-8616-49F81263BD32, OS:17.5, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2218220Z { platform:iOS Simulator, id:ABD7F2D8-E79A-45AD-8616-49F81263BD32, OS:17.5, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2220330Z { platform:iOS Simulator, id:26F8A968-D23B-44FB-BF4C-4209BFC5E639, OS:18.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2221120Z { platform:iOS Simulator, id:26F8A968-D23B-44FB-BF4C-4209BFC5E639, OS:18.1, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2222100Z { platform:iOS Simulator, id:6CD49551-070B-48E8-BEB3-9492D56A1118, OS:18.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.2222880Z { platform:iOS Simulator, id:6CD49551-070B-48E8-BEB3-9492D56A1118, OS:18.2, name:iPhone SE (3rd generation) }
+2026-06-19T11:18:23.5857350Z 
+2026-06-19T11:18:23.5874560Z ExecuteExternalTool /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App/Assets.xcassets
+2026-06-19T11:18:27.5362710Z 
+2026-06-19T11:18:27.5469800Z ExecuteExternalTool /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -x c -c /dev/null
+2026-06-19T11:18:27.5573890Z 
+2026-06-19T11:18:27.5734800Z ExecuteExternalTool /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+2026-06-19T11:18:27.5845650Z 
+2026-06-19T11:18:27.5950980Z ExecuteExternalTool /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+2026-06-19T11:18:27.6055220Z 
+2026-06-19T11:18:27.6159910Z ExecuteExternalTool /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+2026-06-19T11:18:27.6263680Z 
+2026-06-19T11:18:27.9166020Z Build description signature: 425788a045b35cf3c27ac09d55655489
+2026-06-19T11:18:27.9318270Z Build description path: /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/XCBuildData/425788a045b35cf3c27ac09d55655489.xcbuilddata
+2026-06-19T11:18:27.9633890Z CreateBuildDirectory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products
+2026-06-19T11:18:27.9736430Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:27.9855580Z     builtin-create-build-directory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products
+2026-06-19T11:18:27.9963010Z 
+2026-06-19T11:18:28.0081040Z CreateBuildDirectory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex
+2026-06-19T11:18:28.0217300Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:28.0327200Z     builtin-create-build-directory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex
+2026-06-19T11:18:28.0443510Z 
+2026-06-19T11:18:28.0589220Z ClangStatCache /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache
+2026-06-19T11:18:28.0631980Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:28.0828310Z     /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -o /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache
+2026-06-19T11:18:32.0788960Z 
+2026-06-19T11:18:32.0889330Z CreateBuildDirectory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos
+2026-06-19T11:18:32.0995870Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:32.1098730Z     builtin-create-build-directory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos
+2026-06-19T11:18:32.1198570Z 
+2026-06-19T11:18:32.1300420Z CreateBuildDirectory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+2026-06-19T11:18:32.1401700Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:32.1467570Z     builtin-create-build-directory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+2026-06-19T11:18:32.1468350Z 
+2026-06-19T11:18:32.1477230Z ProcessXCFramework /Users/runner/work/goddatax-ios/goddatax-ios/build/SourcePackages/artifacts/capacitor-swift-pm/Cordova/Cordova.xcframework /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/Cordova.framework ios
+2026-06-19T11:18:32.1480670Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:32.1482420Z     builtin-process-xcframework --xcframework /Users/runner/work/goddatax-ios/goddatax-ios/build/SourcePackages/artifacts/capacitor-swift-pm/Cordova/Cordova.xcframework --platform ios --target-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos
+2026-06-19T11:18:32.1489680Z /Users/runner/work/goddatax-ios/goddatax-ios/build/SourcePackages/artifacts/capacitor-swift-pm/Cordova/Cordova.xcframework:1:1: note: The identity of “Cordova.xcframework” is not recorded in your project.
+2026-06-19T11:18:32.1600480Z 
+2026-06-19T11:18:32.1710800Z ProcessXCFramework /Users/runner/work/goddatax-ios/goddatax-ios/build/SourcePackages/artifacts/capacitor-swift-pm/Capacitor/Capacitor.xcframework /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/Capacitor.framework ios
+2026-06-19T11:18:32.1808920Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:32.1879470Z     builtin-process-xcframework --xcframework /Users/runner/work/goddatax-ios/goddatax-ios/build/SourcePackages/artifacts/capacitor-swift-pm/Capacitor/Capacitor.xcframework --platform ios --target-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos
+2026-06-19T11:18:32.1890620Z /Users/runner/work/goddatax-ios/goddatax-ios/build/SourcePackages/artifacts/capacitor-swift-pm/Capacitor/Capacitor.xcframework:1:1: note: The identity of “Capacitor.xcframework” is not recorded in your project.
+2026-06-19T11:18:32.1891500Z 
+2026-06-19T11:18:32.1892170Z CreateBuildDirectory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/PackageFrameworks
+2026-06-19T11:18:32.2000030Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App/App.xcodeproj
+2026-06-19T11:18:32.2105390Z     builtin-create-build-directory /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/PackageFrameworks
+2026-06-19T11:18:32.2236190Z 
+2026-06-19T11:18:32.2364290Z MkDir /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/App.app/Frameworks (in target 'App' from project 'App')
+2026-06-19T11:18:32.2479210Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App
+2026-06-19T11:18:32.2609950Z     /bin/mkdir -p /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/App.app/Frameworks
+2026-06-19T11:18:32.2654520Z 
+2026-06-19T11:18:32.2773610Z MkDir /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/App.app (in target 'App' from project 'App')
+2026-06-19T11:18:32.2893700Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/ios/App
+2026-06-19T11:18:32.3003520Z     /bin/mkdir -p /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/App.app
+2026-06-19T11:18:32.3104980Z 
+2026-06-19T11:18:32.3210110Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/KeepAwakePlugin.modulemap (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.3315100Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.3414700Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/KeepAwakePlugin.modulemap
+2026-06-19T11:18:32.3516280Z 
+2026-06-19T11:18:32.3625650Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DevicePlugin.modulemap (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.3732250Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.3832190Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DevicePlugin.modulemap
+2026-06-19T11:18:32.3932000Z 
+2026-06-19T11:18:32.4046880Z Copy /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/KeepAwakePlugin.modulemap /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/KeepAwakePlugin.modulemap (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.4147270Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.4254210Z     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/KeepAwakePlugin.modulemap /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos
+2026-06-19T11:18:32.4353150Z 
+2026-06-19T11:18:32.4455590Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/AppPlugin.modulemap (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:32.4556730Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:32.4595570Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/AppPlugin.modulemap
+2026-06-19T11:18:32.4697020Z 
+2026-06-19T11:18:32.4799710Z Copy /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/DevicePlugin.modulemap /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DevicePlugin.modulemap (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.4902350Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.5028390Z     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DevicePlugin.modulemap /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos
+2026-06-19T11:18:32.5085430Z 
+2026-06-19T11:18:32.5151130Z Copy /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/AppPlugin.modulemap /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/AppPlugin.modulemap (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:32.5254560Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:32.5364350Z     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/AppPlugin.modulemap /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos
+2026-06-19T11:18:32.5424450Z 
+2026-06-19T11:18:32.5432150Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.LinkFileList (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5434430Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5438150Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.LinkFileList
+2026-06-19T11:18:32.5438890Z 
+2026-06-19T11:18:32.5440930Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.LinkFileList (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.5442790Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.5443920Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.LinkFileList
+2026-06-19T11:18:32.5444780Z 
+2026-06-19T11:18:32.5446620Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin_const_extract_protocols.json (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5448530Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5450350Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin_const_extract_protocols.json
+2026-06-19T11:18:32.5451180Z 
+2026-06-19T11:18:32.5452480Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.SwiftFileList (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5453970Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5455070Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.SwiftFileList
+2026-06-19T11:18:32.5455810Z 
+2026-06-19T11:18:32.5457110Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-OutputFileMap.json (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5458400Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5459580Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-OutputFileMap.json
+2026-06-19T11:18:32.5460350Z 
+2026-06-19T11:18:32.5461510Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin_const_extract_protocols.json (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.5462840Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.5463860Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin_const_extract_protocols.json
+2026-06-19T11:18:32.5464550Z 
+2026-06-19T11:18:32.5465670Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.SwiftFileList (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.5466830Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.5467810Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.SwiftFileList
+2026-06-19T11:18:32.5468480Z 
+2026-06-19T11:18:32.5469620Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-OutputFileMap.json (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.5470730Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.5471780Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-OutputFileMap.json
+2026-06-19T11:18:32.5472480Z 
+2026-06-19T11:18:32.5473540Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.LinkFileList (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:32.5475690Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:32.5476680Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.LinkFileList
+2026-06-19T11:18:32.5477520Z 
+2026-06-19T11:18:32.5478900Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin_const_extract_protocols.json (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:32.5480570Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:32.5481680Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin_const_extract_protocols.json
+2026-06-19T11:18:32.5482460Z 
+2026-06-19T11:18:32.5483550Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.SwiftFileList (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:32.5484700Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:32.5485700Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.SwiftFileList
+2026-06-19T11:18:32.5486570Z 
+2026-06-19T11:18:32.5487990Z WriteAuxiliaryFile /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-OutputFileMap.json (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:32.5490210Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:32.5494630Z     write-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-OutputFileMap.json
+2026-06-19T11:18:32.5496620Z 
+2026-06-19T11:18:32.5498950Z SwiftDriver KeepAwakePlugin normal arm64 com.apple.xcode.tools.swift.compiler (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5501420Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5521560Z     builtin-SwiftDriver -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name KeepAwakePlugin -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.SwiftFileList -DSWIFT_PACKAGE -DXcode -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -target arm64-apple-ios15.0 -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -suppress-warnings -swift-version 5 -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -parse-as-library -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -output-file-map /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xfrontend -package-name -Xfrontend keep_awake -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin_const_extract_protocols.json -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-Swift.h -working-directory /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake -no-emit-module-separately-wmo
+2026-06-19T11:18:32.5534140Z 
+2026-06-19T11:18:32.5534770Z SwiftDriver DevicePlugin normal arm64 com.apple.xcode.tools.swift.compiler (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.5535510Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.5567240Z     builtin-SwiftDriver -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name DevicePlugin -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.SwiftFileList -DSWIFT_PACKAGE -DXcode -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -target arm64-apple-ios15.0 -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -suppress-warnings -swift-version 5 -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -output-file-map /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xfrontend -package-name -Xfrontend device -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin_const_extract_protocols.json -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-Swift.h -working-directory /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device -no-emit-module-separately-wmo
+2026-06-19T11:18:32.5582660Z 
+2026-06-19T11:18:32.5583570Z SwiftDriver AppPlugin normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:32.5585020Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:32.5601430Z     builtin-SwiftDriver -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AppPlugin -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.SwiftFileList -DSWIFT_PACKAGE -DXcode -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -target arm64-apple-ios15.0 -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -suppress-warnings -swift-version 5 -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -parse-as-library -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -output-file-map /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xfrontend -package-name -Xfrontend app -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin_const_extract_protocols.json -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-Swift.h -working-directory /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app -no-emit-module-separately-wmo
+2026-06-19T11:18:32.5615140Z 
+2026-06-19T11:18:32.5618030Z SwiftDriver\ Compilation KeepAwakePlugin normal arm64 com.apple.xcode.tools.swift.compiler (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5619560Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5634870Z     builtin-Swift-Compilation -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name KeepAwakePlugin -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.SwiftFileList -DSWIFT_PACKAGE -DXcode -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -target arm64-apple-ios15.0 -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -suppress-warnings -swift-version 5 -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -parse-as-library -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -output-file-map /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xfrontend -package-name -Xfrontend keep_awake -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin_const_extract_protocols.json -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-Swift.h -working-directory /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake -no-emit-module-separately-wmo
+2026-06-19T11:18:32.5647520Z 
+2026-06-19T11:18:32.5648290Z SwiftDriver\ Compilation DevicePlugin normal arm64 com.apple.xcode.tools.swift.compiler (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:32.5649120Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:32.5664570Z     builtin-Swift-Compilation -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name DevicePlugin -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.SwiftFileList -DSWIFT_PACKAGE -DXcode -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -target arm64-apple-ios15.0 -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -suppress-warnings -swift-version 5 -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -output-file-map /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xfrontend -package-name -Xfrontend device -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin_const_extract_protocols.json -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-Swift.h -working-directory /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device -no-emit-module-separately-wmo
+2026-06-19T11:18:32.5685610Z 
+2026-06-19T11:18:32.5687150Z SwiftCompile normal arm64 Compiling\ KeepAwakePlugin.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake/ios/Sources/KeepAwakePlugin/KeepAwakePlugin.swift (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5688450Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5723390Z     builtin-swiftTaskExecution -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake/ios/Sources/KeepAwakePlugin/KeepAwakePlugin.swift -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftmodule -emit-module-doc-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftdoc -emit-module-source-info-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftsourceinfo -emit-dependencies-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-master.d -emit-const-values-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-master.swiftconstvalues -serialize-diagnostics-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-master.dia -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-Swift.h -emit-abi-descriptor-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.abi.json -target arm64-apple-ios15.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -no-color-diagnostics -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -suppress-warnings -swift-version 5 -enforce-exclusivity\=checked -O -D SWIFT_PACKAGE -D Xcode -serialize-debugging-options -package-name keep_awake -const-gather-protocols-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin_const_extract_protocols.json -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake -resource-dir /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/swift-overrides.hmap -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -module-name KeepAwakePlugin -frontend-parseable-output -disable-clang-spi -target-sdk-version 17.5 -target-sdk-name iphoneos17.5 -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -enable-default-cmo -parse-as-library -num-threads 3 -o /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.o -index-unit-output-path /CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.o
+2026-06-19T11:18:32.5749650Z 
+2026-06-19T11:18:32.5752250Z SwiftCompile normal arm64 /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake/ios/Sources/KeepAwakePlugin/KeepAwakePlugin.swift (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:32.5753820Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake
+2026-06-19T11:18:32.5798110Z     /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -c /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake/ios/Sources/KeepAwakePlugin/KeepAwakePlugin.swift -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftmodule -emit-module-doc-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftdoc -emit-module-source-info-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.swiftsourceinfo -emit-dependencies-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-master.d -emit-const-values-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-master.swiftconstvalues -serialize-diagnostics-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-master.dia -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin-Swift.h -emit-abi-descriptor-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.abi.json -target arm64-apple-ios15.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -no-color-diagnostics -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -suppress-warnings -swift-version 5 -enforce-exclusivity\=checked -O -D SWIFT_PACKAGE -D Xcode -serialize-debugging-options -package-name keep_awake -const-gather-protocols-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin_const_extract_protocols.json -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor-community/keep-awake -resource-dir /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/swift-overrides.hmap -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -module-name KeepAwakePlugin -frontend-parseable-output -disable-clang-spi -target-sdk-version 17.5 -target-sdk-name iphoneos17.5 -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -enable-default-cmo -parse-as-library -num-threads 3 -o /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.o -index-unit-output-path /CapacitorCommunityKeepAwake.build/Release-iphoneos/KeepAwakePlugin.build/Objects-normal/arm64/KeepAwakePlugin.o
+2026-06-19T11:18:42.1444140Z 
+2026-06-19T11:18:42.1550510Z SwiftCompile normal arm64 Compiling\ Device.swift,\ DevicePlugin.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/Device.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/DevicePlugin.swift (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:42.1558670Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:42.1613930Z     builtin-swiftTaskExecution -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/Device.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/DevicePlugin.swift -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftmodule -emit-module-doc-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftdoc -emit-module-source-info-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftsourceinfo -emit-dependencies-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-master.d -emit-const-values-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-master.swiftconstvalues -serialize-diagnostics-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-master.dia -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-Swift.h -emit-abi-descriptor-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.abi.json -target arm64-apple-ios15.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -no-color-diagnostics -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -suppress-warnings -swift-version 5 -enforce-exclusivity\=checked -O -D SWIFT_PACKAGE -D Xcode -serialize-debugging-options -package-name device -const-gather-protocols-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin_const_extract_protocols.json -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device -resource-dir /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/swift-overrides.hmap -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -module-name DevicePlugin -frontend-parseable-output -disable-clang-spi -target-sdk-version 17.5 -target-sdk-name iphoneos17.5 -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -enable-default-cmo -num-threads 3 -o /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/Device.o -o /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.o -index-unit-output-path /CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/Device.o -index-unit-output-path /CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.o
+2026-06-19T11:18:42.1681300Z CompileSwift normal arm64 (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:42.1684570Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device
+2026-06-19T11:18:42.1761470Z     /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -c /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/Device.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/DevicePlugin.swift -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftmodule -emit-module-doc-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftdoc -emit-module-source-info-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.swiftsourceinfo -emit-dependencies-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-master.d -emit-const-values-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-master.swiftconstvalues -serialize-diagnostics-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-master.dia -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin-Swift.h -emit-abi-descriptor-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.abi.json -target arm64-apple-ios15.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -no-color-diagnostics -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -suppress-warnings -swift-version 5 -enforce-exclusivity\=checked -O -D SWIFT_PACKAGE -D Xcode -serialize-debugging-options -package-name device -const-gather-protocols-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin_const_extract_protocols.json -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device -resource-dir /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/swift-overrides.hmap -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -module-name DevicePlugin -frontend-parseable-output -disable-clang-spi -target-sdk-version 17.5 -target-sdk-name iphoneos17.5 -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -enable-default-cmo -num-threads 3 -o /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/Device.o -o /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.o -index-unit-output-path /CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/Device.o -index-unit-output-path /CapacitorDevice.build/Release-iphoneos/DevicePlugin.build/Objects-normal/arm64/DevicePlugin.o
+2026-06-19T11:18:42.1798030Z /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/DevicePlugin.swift:23:18: error: value of type 'CAPPluginCall' has no member 'reject'
+2026-06-19T11:18:42.1798890Z             call.reject("Id not available")
+2026-06-19T11:18:42.1799200Z             ~~~~ ^~~~~~
+2026-06-19T11:18:42.1799370Z 
+2026-06-19T11:18:42.1799970Z SwiftDriver\ Compilation AppPlugin normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:42.1800740Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:42.1814910Z     builtin-Swift-Compilation -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AppPlugin -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.SwiftFileList -DSWIFT_PACKAGE -DXcode -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -target arm64-apple-ios15.0 -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -suppress-warnings -swift-version 5 -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -parse-as-library -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -output-file-map /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xfrontend -package-name -Xfrontend app -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin_const_extract_protocols.json -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-Swift.h -working-directory /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app -no-emit-module-separately-wmo
+2026-06-19T11:18:42.1829360Z 
+2026-06-19T11:18:42.1830350Z SwiftCompile normal arm64 Compiling\ AppPlugin.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app/ios/Sources/AppPlugin/AppPlugin.swift (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:42.1831380Z     cd /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app
+2026-06-19T11:18:42.1885800Z     builtin-swiftTaskExecution -- /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app/ios/Sources/AppPlugin/AppPlugin.swift -emit-module-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.swiftmodule -emit-module-doc-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.swiftdoc -emit-module-source-info-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.swiftsourceinfo -emit-dependencies-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-master.d -emit-const-values-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-master.swiftconstvalues -serialize-diagnostics-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-master.dia -emit-objc-header-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin-Swift.h -emit-abi-descriptor-path /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.abi.json -target arm64-apple-ios15.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk -I /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -I /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/Developer/Library/Frameworks -no-color-diagnostics -g -module-cache-path /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex -suppress-warnings -swift-version 5 -enforce-exclusivity\=checked -O -D SWIFT_PACKAGE -D Xcode -serialize-debugging-options -package-name app -const-gather-protocols-file /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin_const_extract_protocols.json -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/work/goddatax-ios/goddatax-ios/build/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app -resource-dir /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -Xcc -ivfsstatcache -Xcc /Users/runner/work/goddatax-ios/goddatax-ios/build/SDKStatCaches.noindex/iphoneos17.5-21F77-f0fa7969d082b13145125136a829df3a.sdkstatcache -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/swift-overrides.hmap -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/DerivedSources -Xcc -DSWIFT_PACKAGE -module-name AppPlugin -frontend-parseable-output -disable-clang-spi -target-sdk-version 17.5 -target-sdk-name iphoneos17.5 -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_15.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_15.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -enable-default-cmo -parse-as-library -num-threads 3 -o /Users/runner/work/goddatax-ios/goddatax-ios/build/Build/Intermediates.noindex/CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.o -index-unit-output-path /CapacitorApp.build/Release-iphoneos/AppPlugin.build/Objects-normal/arm64/AppPlugin.o
+2026-06-19T11:18:42.1906040Z Command SwiftCompile failed with a nonzero exit code
+2026-06-19T11:18:42.1906360Z 
+2026-06-19T11:18:42.1907030Z SwiftDriverJobDiscovery normal arm64 Compiling KeepAwakePlugin.swift (in target 'KeepAwakePlugin' from project 'CapacitorCommunityKeepAwake')
+2026-06-19T11:18:42.1907550Z 
+2026-06-19T11:18:42.1973710Z ** BUILD FAILED **
+2026-06-19T11:18:42.1974190Z 
+2026-06-19T11:18:42.1974310Z 
+2026-06-19T11:18:42.1974880Z The following build commands failed:
+2026-06-19T11:18:42.1975780Z 	CompileSwift normal arm64 (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:42.1977680Z 	SwiftCompile normal arm64 Compiling\ Device.swift,\ DevicePlugin.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/Device.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/device/ios/Sources/DevicePlugin/DevicePlugin.swift (in target 'DevicePlugin' from project 'CapacitorDevice')
+2026-06-19T11:18:42.1980190Z 	SwiftCompile normal arm64 Compiling\ AppPlugin.swift /Users/runner/work/goddatax-ios/goddatax-ios/node_modules/@capacitor/app/ios/Sources/AppPlugin/AppPlugin.swift (in target 'AppPlugin' from project 'CapacitorApp')
+2026-06-19T11:18:42.1981290Z (3 failures)
+2026-06-19T11:18:42.2649540Z ##[error]Process completed with exit code 65.
+2026-06-19T11:18:42.3020010Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-06-19T11:18:42.3022780Z Post job cleanup.
+2026-06-19T11:18:42.8761360Z [command]/opt/homebrew/bin/git version
+2026-06-19T11:18:42.9212870Z git version 2.54.0
+2026-06-19T11:18:42.9234750Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/d2eee016-a979-4f51-a452-72b9f0157328/.gitconfig'
+2026-06-19T11:18:42.9244010Z Temporarily overriding HOME='/Users/runner/work/_temp/d2eee016-a979-4f51-a452-72b9f0157328' before making global git config changes
+2026-06-19T11:18:42.9246410Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-19T11:18:42.9259180Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/goddatax-ios/goddatax-ios
+2026-06-19T11:18:42.9594260Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-19T11:18:42.9676560Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-19T11:18:43.1737170Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-19T11:18:43.1818160Z http.https://github.com/.extraheader
+2026-06-19T11:18:43.1845100Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-06-19T11:18:43.2029660Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-19T11:18:43.3429070Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-19T11:18:43.3533320Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-19T11:18:43.5196780Z Cleaning up orphan processes
+2026-06-19T11:18:44.3462690Z Terminate orphan process: pid (7811) (ibtoold)
+2026-06-19T11:18:44.3979240Z Terminate orphan process: pid (7758) (ibtoold)
+2026-06-19T11:18:44.6691540Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

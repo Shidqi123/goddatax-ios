@@ -1,0 +1,8 @@
+2026-06-19T11:17:37.4770000Z Job is about to start running on the hosted runner: GitHub Actions 1000000127
+2026-06-19T11:17:37.4700000Z Requested labels: macos-14
+2026-06-19T11:17:37.4700000Z Job defined at: Shidqi123/goddatax-ios/.github/workflows/build-ipa.yml@refs/heads/main
+2026-06-19T11:17:37.4700000Z Waiting for a runner to pick up this job...
+2026-06-19T11:17:37.4760000Z Job is waiting for a hosted runner to come online.
+2026-06-19T11:17:37.4690000Z Evaluating build.if
+2026-06-19T11:17:37.4690000Z Evaluating: success()
+2026-06-19T11:17:37.4690000Z Result: true

@@ -1,0 +1,14 @@
+﻿2026-06-19T10:50:16.0598920Z ##[group]Run npx cap sync
+2026-06-19T10:50:16.0599180Z [36;1mnpx cap sync[0m
+2026-06-19T10:50:16.0651260Z shell: /bin/bash -e {0}
+2026-06-19T10:50:16.0651520Z ##[endgroup]
+2026-06-19T10:50:16.4447440Z ✔ Copying web assets from www to ios/App/App/public in 4.51ms
+2026-06-19T10:50:16.4547790Z ✔ Creating capacitor.config.json in ios/App/App in 468.88μs
+2026-06-19T10:50:16.4649810Z ✔ copy ios in 8.38ms
+2026-06-19T10:50:16.4750090Z ✔ Updating iOS plugins in 246.46μs
+2026-06-19T10:50:16.4850920Z [info] All Capacitor plugins have a Package.swift file and will be included in Package.swift
+2026-06-19T10:50:16.4901030Z [info] Writing Package.swift
+2026-06-19T10:50:16.5003600Z ✔ update ios in 10.01ms
+2026-06-19T10:50:16.5062870Z ✔ copy web in 520.33μs
+2026-06-19T10:50:16.5063850Z ✔ update web in 597.25μs
+2026-06-19T10:50:16.5064320Z [info] Sync finished in 0.028s
